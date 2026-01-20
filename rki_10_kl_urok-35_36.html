@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Имя числительное | 10 класс В2 | Фирменный2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* === ФИРМЕННЫЙ2: Обновлённая палитра === */
+            --header-dark: linear-gradient(135deg, #1a237e 0%, #0d1b4a 50%, #0a1635 100%);
+            --header-accent: #64b5f6;
+            
+            --azure-glow: rgba(100, 181, 246, 0.25);
+            --azure-border: rgba(100, 181, 246, 0.45);
+            --azure-light: rgba(100, 181, 246, 0.12);
+            
+            --ending-color: #d32f2f;
+            --ending-bg: rgba(211, 47, 47, 0.1);
+            
+            --bg-main: #f5f7fa;
+            --bg-card: #ffffff;
+            --bg-secondary: #fafbfc;
+            
+            --text-dark: #1a237e;
+            --text-medium: #455a64;
+            --text-light: #78909c;
+            
+            --correct: #00897b;
+            --correct-bg: rgba(0, 137, 123, 0.1);
+            --correct-light: rgba(0, 137, 123, 0.05);
+            --incorrect: #e64a19;
+            --incorrect-bg: rgba(230, 74, 25, 0.1);
+            
+            --hint-bg: linear-gradient(135deg, #fff8e1 0%, #fff3e0 100%);
+            --hint-border: #ffb74d;
+            --hint-text: #e65100;
+            
+            --block-a: #1976d2;
+            --block-b: #00897b;
+            --block-c: #7b1fa2;
+            
+            --shadow-sm: 0 2px 8px rgba(26, 35, 126, 0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(26, 35, 126, 0.1), 0 2px 6px rgba(0,0,0,0.05);
+            --shadow-lg: 0 8px 32px rgba(26, 35, 126, 0.12), 0 4px 12px rgba(0,0,0,0.06);
+            
+            --radius: 24px;
+            --radius-md: 16px;
+            --radius-sm: 12px;
+            
+            --font-base: 1.35rem;
+            --font-lg: 1.6rem;
+            --font-xl: 2rem;
+            --font-xxl: 2.5rem;
+            --font-title: 2.8rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg-main);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: var(--font-base);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+
+        .header {
+            background: var(--header-dark);
+            border-radius: var(--radius);
+            padding: 40px 35px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(100, 181, 246, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(100, 181, 246, 0.15);
+            border: 2px solid rgba(100, 181, 246, 0.35);
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: var(--font-base);
+            font-weight: 800;
+            color: var(--header-accent);
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: var(--font-title);
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .header .subtitle {
+            color: var(--header-accent);
+            font-size: var(--font-xl);
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle-uz {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: var(--font-lg);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            margin-top: 6px;
+            font-style: italic;
+        }
+
+        .tabs-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg-main);
+            padding: 15px 0;
+            margin: -15px 0 20px 0;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 14px 28px;
+            border: 2px solid var(--azure-border);
+            background: var(--bg-card);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 800;
+            color: var(--text-dark);
+            transition: all 0.25s ease;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .tab-btn.active {
+            background: var(--header-dark);
+            color: #ffffff;
+            border-color: transparent;
+        }
+
+        .section {
+            display: none;
+            animation: slideIn 0.35s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 35px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(100, 181, 246, 0.2);
+            margin-bottom: 25px;
+        }
+
+        .card-title {
+            font-family: 'Merriweather', serif;
+            font-size: var(--font-xxl);
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid var(--azure-light);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .card-title .icon { font-size: var(--font-xxl); }
+        .card-title .uz {
+            font-size: var(--font-lg);
+            color: var(--text-light);
+            font-style: italic;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+        }
+
+        .rule-box {
+            background: var(--bg-secondary);
+            border-left: 5px solid var(--header-accent);
+            padding: 22px 28px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin-bottom: 22px;
+        }
+
+        .rule-title {
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-size: var(--font-lg);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rule-content {
+            color: var(--text-medium);
+            font-size: var(--font-base);
+            line-height: 2;
+        }
+
+        .rule-content-uz {
+            color: var(--text-light);
+            font-size: calc(var(--font-base) - 0.1rem);
+            font-style: italic;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--azure-border);
+        }
+
+        .num {
+            color: var(--ending-color);
+            font-weight: 800;
+            background: var(--ending-bg);
+            padding: 3px 10px;
+            border-radius: 6px;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 22px 0;
+            font-size: var(--font-base);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .grammar-table th,
+        .grammar-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--azure-light);
+        }
+
+        .grammar-table th {
+            background: var(--header-dark);
+            color: #ffffff;
+            font-weight: 800;
+            font-size: var(--font-lg);
+        }
+
+        .grammar-table tr:last-child td { border-bottom: none; }
+        .grammar-table tr:nth-child(even) { background: var(--bg-secondary); }
+        .grammar-table tr:hover { background: var(--azure-light); }
+
+        .example-box {
+            background: var(--bg-secondary);
+            padding: 22px;
+            border-radius: var(--radius-md);
+            margin-top: 18px;
+            border: 1px dashed var(--azure-border);
+        }
+
+        .example-title {
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-size: var(--font-lg);
+        }
+
+        .example-item {
+            padding: 12px 0;
+            border-bottom: 1px dotted var(--azure-border);
+            font-size: var(--font-base);
+            line-height: 1.9;
+        }
+
+        .example-item:last-child { border-bottom: none; }
+
+        .example-uz {
+            color: var(--text-light);
+            font-style: italic;
+            display: block;
+            margin-top: 6px;
+            font-size: calc(var(--font-base) - 0.1rem);
+        }
+
+        .progress-container {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .progress-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .circular-progress {
+            position: relative;
+            width: 70px;
+            height: 70px;
+        }
+
+        .circular-progress svg { transform: rotate(-90deg); }
+        .circular-progress circle { fill: none; stroke-width: 6; }
+        .circular-progress .bg { stroke: #e0e0e0; }
+        .circular-progress .progress {
+            stroke: url(#progressGradient);
+            stroke-linecap: round;
+            transition: stroke-dashoffset 0.5s ease;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 900;
+            font-size: var(--font-base);
+            color: var(--text-dark);
+        }
+
+        .progress-info { display: flex; flex-direction: column; gap: 5px; }
+        .progress-label { font-weight: 800; color: var(--text-dark); font-size: var(--font-lg); }
+        .progress-sublabel { color: var(--text-light); font-size: calc(var(--font-base) - 0.1rem); }
+
+        .progress-score { display: flex; gap: 20px; }
+        .score-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 800;
+            font-size: var(--font-lg);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+        }
+
+        .score-correct { color: var(--correct); background: var(--correct-light); }
+        .score-incorrect { color: var(--incorrect); background: rgba(230, 74, 25, 0.05); }
+
+        .question-map {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 15px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .map-dot {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .map-dot.unanswered { background: #e0e0e0; color: var(--text-light); }
+        .map-dot.current { background: var(--header-dark); color: #ffffff; transform: scale(1.15); box-shadow: var(--shadow-md); }
+        .map-dot.correct { background: var(--correct); color: #ffffff; }
+        .map-dot.incorrect { background: var(--incorrect); color: #ffffff; }
+        .map-dot.block-a { border-color: var(--block-a); }
+        .map-dot.block-b { border-color: var(--block-b); }
+        .map-dot.block-c { border-color: var(--block-c); }
+
+        .question-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 35px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 20px;
+            border: 1px solid rgba(100, 181, 246, 0.2);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .question-number {
+            background: var(--header-dark);
+            color: #ffffff;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: 900;
+            font-size: var(--font-base);
+        }
+
+        .question-type {
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: calc(var(--font-base) - 0.1rem);
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .question-type.block-a { background: var(--block-a); }
+        .question-type.block-b { background: var(--block-b); }
+        .question-type.block-c { background: var(--block-c); }
+
+        .question-text {
+            font-size: var(--font-xl);
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-weight: 600;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 18px 22px;
+            background: var(--bg-card);
+            border: 2px solid #e0e0e0;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .option:hover { transform: translateX(8px); border-color: var(--header-accent); box-shadow: var(--shadow-sm); }
+        .option.selected { border-color: var(--text-dark); background: var(--azure-light); }
+        .option.correct { border-color: var(--correct); background: var(--correct-bg); }
+        .option.incorrect { border-color: var(--incorrect); background: var(--incorrect-bg); }
+        .option.disabled { pointer-events: none; opacity: 0.7; }
+
+        .option-marker {
+            width: 44px;
+            height: 44px;
+            background: var(--bg-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-right: 18px;
+            flex-shrink: 0;
+            font-size: var(--font-base);
+            transition: all 0.25s ease;
+        }
+
+        .option.selected .option-marker { background: var(--text-dark); color: #ffffff; }
+        .option.correct .option-marker { background: var(--correct); color: #ffffff; }
+        .option.incorrect .option-marker { background: var(--incorrect); color: #ffffff; }
+        .option-text { font-size: var(--font-lg); font-weight: 700; color: var(--text-dark); }
+
+        .hint-container { margin: 22px 0; }
+
+        .hint-btn {
+            background: var(--hint-bg);
+            border: 2px solid var(--hint-border);
+            padding: 12px 22px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 800;
+            color: var(--hint-text);
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hint-btn:hover { transform: scale(1.02); box-shadow: 0 4px 15px rgba(255, 183, 77, 0.3); }
+        .hint-btn .lamp { font-size: 1.3em; animation: pulse 2s infinite; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .hint-box {
+            display: none;
+            background: var(--hint-bg);
+            border: 2px solid var(--hint-border);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            margin-top: 15px;
+        }
+
+        .hint-box.show { display: block; animation: slideIn 0.3s ease; }
+        .hint-label { font-weight: 900; color: var(--hint-text); margin-bottom: 8px; font-size: var(--font-base); }
+        .hint-text { color: var(--text-medium); font-size: var(--font-base); line-height: 1.7; }
+        .hint-text-uz { color: var(--text-light); font-style: italic; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--hint-border); font-size: calc(var(--font-base) - 0.1rem); }
+
+        .feedback {
+            display: none;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            margin: 22px 0;
+        }
+
+        .feedback.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback.correct { background: var(--correct-bg); border: 2px solid var(--correct); }
+        .feedback.incorrect { background: var(--incorrect-bg); border: 2px solid var(--incorrect); }
+        .feedback-title { font-weight: 900; font-size: var(--font-xl); margin-bottom: 10px; }
+        .feedback.correct .feedback-title { color: var(--correct); }
+        .feedback.incorrect .feedback-title { color: var(--incorrect); }
+        .feedback-text { color: var(--text-medium); font-size: var(--font-base); line-height: 1.7; }
+        .feedback-explanation { margin-top: 12px; padding-top: 12px; border-top: 1px dashed currentColor; font-size: calc(var(--font-base) - 0.05rem); }
+
+        .btn-container { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+        .btn {
+            padding: 16px 35px;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 800;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary { background: var(--header-dark); color: #ffffff; }
+        .btn-primary:hover:not(:disabled) { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+        .btn-next { background: linear-gradient(135deg, var(--correct) 0%, #00695c 100%); color: #ffffff; }
+        .btn-next:hover { transform: translateX(5px); }
+        .btn-restart { background: linear-gradient(135deg, #64b5f6 0%, #1976d2 100%); color: #ffffff; }
+
+        .results-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 45px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .results-icon { font-size: 5rem; margin-bottom: 20px; }
+        .results-score {
+            font-size: 4rem;
+            font-weight: 900;
+            background: var(--header-dark);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .results-title {
+            font-family: 'Merriweather', serif;
+            font-size: var(--font-xxl);
+            color: var(--text-dark);
+            margin-bottom: 25px;
+        }
+
+        .results-stats { display: flex; justify-content: center; gap: 20px; margin-bottom: 25px; flex-wrap: wrap; }
+
+        .stat-block {
+            background: var(--bg-secondary);
+            padding: 18px 25px;
+            border-radius: var(--radius-md);
+            min-width: 140px;
+            border-left: 4px solid;
+        }
+
+        .stat-block.block-a { border-color: var(--block-a); }
+        .stat-block.block-b { border-color: var(--block-b); }
+        .stat-block.block-c { border-color: var(--block-c); }
+        .stat-label { font-size: calc(var(--font-base) - 0.1rem); color: var(--text-light); margin-bottom: 5px; }
+        .stat-value { font-size: var(--font-xl); font-weight: 900; color: var(--text-dark); }
+
+        .results-recommendation {
+            background: var(--hint-bg);
+            border: 2px solid var(--hint-border);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .recommendation-title { font-weight: 800; color: var(--hint-text); margin-bottom: 8px; font-size: var(--font-base); }
+        .recommendation-text { color: var(--text-medium); font-size: var(--font-base); }
+
+        .author-info {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--azure-light);
+            text-align: center;
+            font-size: calc(var(--font-base) - 0.1rem);
+            color: var(--text-light);
+        }
+
+        .author-info-name { font-weight: 800; color: var(--text-dark); }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-light);
+            font-size: var(--font-base);
+        }
+
+        .footer-brand { font-weight: 700; color: var(--text-medium); }
+
+        @media (max-width: 900px) {
+            :root {
+                --font-base: 1.15rem;
+                --font-lg: 1.35rem;
+                --font-xl: 1.7rem;
+                --font-xxl: 2rem;
+                --font-title: 2.3rem;
+            }
+            .container { padding: 15px; }
+            .header { padding: 30px 20px; }
+            .card, .question-card { padding: 25px; }
+            .circular-progress { width: 55px; height: 55px; }
+        }
+
+        body { -webkit-touch-callout: none; }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;">
+    <svg width="0" height="0">
+        <defs>
+            <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#1a237e"/>
+                <stop offset="100%" style="stop-color:#64b5f6"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <div class="container">
+        <header class="header">
+            <div class="header-badge">
+                <span>📚</span>
+                <span>10 класс • Уровень В2</span>
+            </div>
+            <h1>Имя числительное</h1>
+            <div class="subtitle">Профессии на все времена • Количественные и порядковые</div>
+            <div class="subtitle-uz">Son • Miqdor va tartib sonlari</div>
+        </header>
+
+        <div class="tabs-wrapper">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showSection('grammar', this)">
+                    <span>📖</span> Правила
+                </button>
+                <button class="tab-btn" onclick="showSection('test', this)">
+                    <span>✏️</span> Тест (25)
+                </button>
+                <button class="tab-btn" onclick="showSection('results', this)" id="resultsTab" style="display:none;">
+                    <span>📊</span> Результаты
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== ПРАВИЛА ===== -->
+        <section id="grammar" class="section active">
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="icon">🔢</span> 
+                    Имя числительное
+                    <span class="uz">(Son)</span>
+                </h2>
+                
+                <div class="rule-box">
+                    <div class="rule-title">📌 Виды числительных</div>
+                    <div class="rule-content">
+                        <strong>Количественные</strong> (сколько?): <span class="num">один</span>, <span class="num">двадцать один</span>, <span class="num">трое</span>, <span class="num">четверо</span><br><br>
+                        <strong>Порядковые</strong> (какой? который?): <span class="num">первый</span>, <span class="num">второй</span>, <span class="num">третий</span>
+                    </div>
+                    <div class="rule-content-uz">
+                        <strong>Miqdor sonlari</strong> (nechta?): bir, yigirma bir, uchov, to'rtov<br>
+                        <strong>Tartib sonlari</strong> (qaysi? nechanchi?): birinchi, ikkinchi, uchinchi
+                    </div>
+                </div>
+
+                <div class="rule-box">
+                    <div class="rule-title">📌 Склонение составных числительных</div>
+                    <div class="rule-content">
+                        <strong>В составных количественных</strong> числительных при склонении изменяются <strong>ОБЕ части</strong>:<br>
+                        <em>Акция пройдёт в <span class="num">семидесяти трёх</span> школах.</em><br><br>
+                        <strong>В составных порядковых</strong> числительных изменяется только <strong>ПОСЛЕДНЯЯ часть</strong>:<br>
+                        <em>Компания работает с февраля <span class="num">две тысячи двадцать первого</span> года.</em>
+                    </div>
+                    <div class="rule-content-uz">
+                        <strong>Murakkab miqdor sonlarida</strong> — barcha qismlar o'zgaradi.<br>
+                        <strong>Murakkab tartib sonlarida</strong> — faqat oxirgi qism o'zgaradi.
+                    </div>
+                </div>
+
+                <table class="grammar-table">
+                    <tr>
+                        <th>Падеж</th>
+                        <th>Количественное</th>
+                        <th>Порядковое</th>
+                    </tr>
+                    <tr>
+                        <td>И.п.</td>
+                        <td>двадцать <span class="num">один</span></td>
+                        <td>двадцать <span class="num">первый</span></td>
+                    </tr>
+                    <tr>
+                        <td>Р.п.</td>
+                        <td>двадцати <span class="num">одного</span></td>
+                        <td>двадцать <span class="num">первого</span></td>
+                    </tr>
+                    <tr>
+                        <td>Д.п.</td>
+                        <td>двадцати <span class="num">одному</span></td>
+                        <td>двадцать <span class="num">первому</span></td>
+                    </tr>
+                    <tr>
+                        <td>В.п.</td>
+                        <td>двадцать <span class="num">один</span> / двадцать <span class="num">одного</span></td>
+                        <td>двадцать <span class="num">первый</span> / <span class="num">первого</span></td>
+                    </tr>
+                    <tr>
+                        <td>Т.п.</td>
+                        <td>двадцатью <span class="num">одним</span></td>
+                        <td>двадцать <span class="num">первым</span></td>
+                    </tr>
+                    <tr>
+                        <td>П.п.</td>
+                        <td>о двадцати <span class="num">одном</span></td>
+                        <td>о двадцать <span class="num">первом</span></td>
+                    </tr>
+                </table>
+
+                <div class="rule-box">
+                    <div class="rule-title">📌 Запомните!</div>
+                    <div class="rule-content">
+                        <span class="num">Одни</span> + мн. число: <em>одни очки, одни ножницы, одни сутки, одни брюки</em><br><br>
+                        <span class="num">Половина</span> (½, 0,5) + Р.п.: <em>половина яблока</em><br><br>
+                        <span class="num">Полтора</span> (1½, 1,5) + Р.п. ед.ч.: <em>полтора часа, полторы недели</em>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">💼 Профессия экономиста:</div>
+                    <div class="example-item">
+                        Более <span class="num">80 процентов</span> времени экономиста уходит на изучение цифровой информации.
+                        <span class="example-uz">Iqtisodchining 80 foizdan ko'p vaqti raqamli ma'lumotlarni o'rganishga ketadi.</span>
+                    </div>
+                    <div class="example-item">
+                        <span class="num">10 процентов</span> — на изучение влияния различных факторов на производство.
+                        <span class="example-uz">10 foizi — turli omillarning ta'sirini o'rganishga.</span>
+                    </div>
+                    <div class="example-item">
+                        Эта профессия возникла <span class="num">сотни</span> лет назад.
+                        <span class="example-uz">Bu kasb yuzlab yil oldin paydo bo'lgan.</span>
+                    </div>
+                </div>
+
+                <div class="author-info">
+                    <span class="author-info-name">Бахтияр Хамидов</span> • Республика Узбекистан
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ТЕСТ ===== -->
+        <section id="test" class="section">
+            <div class="progress-container">
+                <div class="progress-left">
+                    <div class="circular-progress">
+                        <svg width="70" height="70">
+                            <circle class="bg" cx="35" cy="35" r="30"></circle>
+                            <circle class="progress" cx="35" cy="35" r="30" 
+                                stroke-dasharray="188.5" 
+                                stroke-dashoffset="188.5" 
+                                id="progressCircle"></circle>
+                        </svg>
+                        <div class="progress-text" id="progressPercent">0%</div>
+                    </div>
+                    <div class="progress-info">
+                        <span class="progress-label">Вопрос <span id="currentQ">1</span> / <span id="totalQ">25</span></span>
+                        <span class="progress-sublabel" id="blockName">Блок А: Виды числительных</span>
+                    </div>
+                </div>
+                <div class="progress-score">
+                    <span class="score-item score-correct">✓ <span id="correctCount">0</span></span>
+                    <span class="score-item score-incorrect">✗ <span id="incorrectCount">0</span></span>
+                </div>
+            </div>
+
+            <div class="question-map" id="questionMap"></div>
+            <div class="question-card" id="questionCard"></div>
+        </section>
+
+        <!-- ===== РЕЗУЛЬТАТЫ ===== -->
+        <section id="results" class="section">
+            <div class="results-card">
+                <div class="results-icon" id="resultsIcon">🎓</div>
+                <div class="results-score" id="resultsScore">0/25</div>
+                <h2 class="results-title" id="resultsTitle">Результат</h2>
+                
+                <div class="results-stats">
+                    <div class="stat-block block-a">
+                        <div class="stat-label">Блок А</div>
+                        <div class="stat-value" id="statA">0/9</div>
+                    </div>
+                    <div class="stat-block block-b">
+                        <div class="stat-label">Блок Б</div>
+                        <div class="stat-value" id="statB">0/8</div>
+                    </div>
+                    <div class="stat-block block-c">
+                        <div class="stat-label">Блок В</div>
+                        <div class="stat-value" id="statC">0/8</div>
+                    </div>
+                </div>
+
+                <div class="results-recommendation">
+                    <div class="recommendation-title">💡 Рекомендация:</div>
+                    <div class="recommendation-text" id="recommendationText">
+                        Продолжайте изучать числительные!
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-restart" onclick="restartTest()">🔄 Начать заново</button>
+                    <button class="btn btn-primary" onclick="showSection('grammar', document.querySelector('.tab-btn'))">📖 К правилам</button>
+                </div>
+
+                <div class="author-info">
+                    <span class="author-info-name">Бахтияр Хамидов</span> • Республика Узбекистан
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-brand">© 2025 Бахтияр Хамидов • Республика Узбекистан | @rki_uz_bot</div>
+        </footer>
+    </div>
+
+    <script>
+        const questions = [
+            // БЛОК А: Виды числительных (9 вопросов)
+            { block: "A", type: "Виды", question: "Какое числительное является количественным?", options: ["первый", "двадцать один", "третий"], correct: 1, hint: "Количественное отвечает на вопрос «сколько?»", hintUz: "Miqdor soni «nechta?» savoliga javob beradi", explanation: "«Двадцать один» отвечает на вопрос «сколько?» — это количественное числительное." },
+            { block: "A", type: "Виды", question: "Какое числительное является порядковым?", options: ["сто", "пятьсот", "двадцать первый"], correct: 2, hint: "Порядковое отвечает на вопрос «какой? который?»", hintUz: "Tartib soni «qaysi?» savoliga javob beradi", explanation: "«Двадцать первый» отвечает на вопрос «какой?» — это порядковое числительное." },
+            { block: "A", type: "Виды", question: "Выберите только числительные:", options: ["один, первый, пять", "одинаковый, пятерня, семёрка", "первостепенный, пятиминутка"], correct: 0, hint: "Числительное обозначает число или порядок", hintUz: "Son — raqam yoki tartibni bildiradi", explanation: "«Один, первый, пять» — числительные. Остальные — прилагательные и существительные." },
+            { block: "A", type: "Виды", question: "К какому виду относится «трое»?", options: ["Количественное", "Порядковое", "Собирательное"], correct: 2, hint: "Обозначает количество как одно целое", hintUz: "Butun birligi sifatida miqdorni bildiradi", explanation: "«Трое» — собирательное числительное (трое друзей)." },
+            { block: "A", type: "Виды", question: "Какое слово НЕ является числительным?", options: ["семь", "семёрка", "седьмой"], correct: 1, hint: "Числительное отвечает на «сколько?» или «какой?»", hintUz: "Son «nechta?» yoki «qaysi?» ga javob beradi", explanation: "«Семёрка» — существительное (что?), а не числительное." },
+            { block: "A", type: "Виды", question: "Определите вид: «в две тысячи двадцать пятом году»", options: ["Количественное", "Порядковое", "Собирательное"], correct: 1, hint: "В каком году? — в ... году", hintUz: "Qaysi yilda? — ... yilda", explanation: "«Двадцать пятом» — порядковое (в каком году?)." },
+            { block: "A", type: "Виды", question: "«Одни ножницы» — слово «одни» это:", options: ["Местоимение", "Числительное", "Прилагательное"], correct: 1, hint: "Одни + сущ. только во мн.ч.", hintUz: "Одни + faqat ko'plik shaklidagi otlar", explanation: "«Одни» — числительное, употребляется с существительными только мн.ч. (ножницы, брюки)." },
+            { block: "A", type: "Виды", question: "Какой вопрос задаём к порядковому числительному?", options: ["Сколько?", "Какой? Который?", "Как?"], correct: 1, hint: "Порядок предметов при счёте", hintUz: "Sanashda tartib", explanation: "Порядковые числительные отвечают на вопрос «какой? который?»" },
+            { block: "A", type: "Виды", question: "«Полтора часа» — числительное «полтора» обозначает:", options: ["1", "1,5", "2"], correct: 1, hint: "Пол + тора = половина второго", hintUz: "Bir yarim", explanation: "«Полтора» = 1½ = 1,5" },
+
+            // БЛОК Б: Склонение (8 вопросов)
+            { block: "B", type: "Склонение", question: "В составном количественном числительном при склонении изменяются:", options: ["Только первая часть", "Только последняя часть", "Обе части"], correct: 2, hint: "Сравните: двадцать один — двадцати одного", hintUz: "Solishtiring: yigirma bir — yigirma birning", explanation: "В составных количественных изменяются ОБЕ части: двадцати одного, двадцатью одним." },
+            { block: "B", type: "Склонение", question: "В составном порядковом числительном при склонении изменяется:", options: ["Только первая часть", "Только последняя часть", "Обе части"], correct: 1, hint: "Сравните: двадцать первый — двадцать первого", hintUz: "Solishtiring: yigirma birinchi — yigirma birinchining", explanation: "В составных порядковых изменяется ТОЛЬКО последняя часть: двадцать первого." },
+            { block: "B", type: "Склонение", question: "Вставьте числительное: «Акция пройдёт в _____ школах» (73)", options: ["семьдесят три", "семидесяти трёх", "семьдесят третьих"], correct: 1, hint: "В чём? — П.п., количественное", hintUz: "Nimada? — o'rin-payt kelishigi", explanation: "Предложный падеж: «в семидесяти трёх школах»." },
+            { block: "B", type: "Склонение", question: "Выберите правильную форму: «с февраля _____ года» (2021)", options: ["две тысячи двадцать один", "две тысячи двадцать первого", "двух тысяч двадцать одного"], correct: 1, hint: "Какого года? — Р.п., порядковое", hintUz: "Qaysi yilning? — qaratqich kelishigi", explanation: "«С февраля две тысячи двадцать первого года» — порядковое в Р.п." },
+            { block: "B", type: "Склонение", question: "Вставьте: «Я прочитал об _____ важном событии» (1)", options: ["один", "одном", "одного"], correct: 1, hint: "О чём? — П.п.", hintUz: "Nima haqida? — o'rin-payt kelishigi", explanation: "Предложный падеж: «об одном событии»." },
+            { block: "B", type: "Склонение", question: "Вставьте: «Он поехал с _____ из друзей» (1)", options: ["один", "одним", "одного"], correct: 1, hint: "С кем? — Т.п.", hintUz: "Kim bilan? — vosita kelishigi", explanation: "Творительный падеж: «с одним из друзей»." },
+            { block: "B", type: "Склонение", question: "Выберите: «между _____ и _____ часами» (3, 5)", options: ["три, пять", "тремя, пятью", "трёх, пяти"], correct: 1, hint: "Между чем? — Т.п.", hintUz: "Nima bilan? — vosita kelishigi", explanation: "Творительный падеж: «между тремя и пятью часами»." },
+            { block: "B", type: "Склонение", question: "«С двумя менеджерами и пятью инженерами» — какой падеж?", options: ["Родительный", "Дательный", "Творительный"], correct: 2, hint: "С кем? — Т.п.", hintUz: "Kim bilan? — vosita kelishigi", explanation: "«С кем?» — творительный падеж: с двумя, с пятью." },
+
+            // БЛОК В: Текст о профессиях (8 вопросов)
+            { block: "C", type: "Текст", question: "Когда возникла профессия экономиста?", options: ["Десятки лет назад", "Сотни лет назад", "Тысячи лет назад"], correct: 1, hint: "С появлением понятий «товар», «деньги», «обмен»", hintUz: "«Tovar», «pul», «ayirboshlash» tushunchalari paydo bo'lganda", explanation: "По тексту: «Эта профессия возникла сотни лет назад»." },
+            { block: "C", type: "Текст", question: "Сколько процентов времени экономист работает с цифровой информацией?", options: ["Более 50%", "Более 80%", "Более 90%"], correct: 1, hint: "Большая часть времени", hintUz: "Vaqtning katta qismi", explanation: "«Более 80 процентов времени экономиста уходит на изучение цифровой информации»." },
+            { block: "C", type: "Текст", question: "Сколько процентов времени уходит на создание уникального решения?", options: ["5%", "10%", "20%"], correct: 1, hint: "Как и на изучение влияния факторов", hintUz: "Omillar ta'sirini o'rganishdek", explanation: "«10 процентов — на создание уникального решения»." },
+            { block: "C", type: "Текст", question: "По мнению Дж. М. Кейнса, экономист должен изучать настоящее в свете:", options: ["Будущего", "Прошлого", "Статистики"], correct: 1, hint: "Ради чего? — ради будущего", hintUz: "Nima uchun? — kelajak uchun", explanation: "«Он должен изучать настоящее в свете прошлого — ради будущего»." },
+            { block: "C", type: "Текст", question: "Какое качество НЕ названо в тексте как важное для экономиста?", options: ["Коммуникабельность", "Творческий подход", "Хорошая память"], correct: 1, hint: "Перечислены: концентрация, скорость, внимательность...", hintUz: "Ko'rsatilgan: diqqat, tezlik, e'tiborlilik...", explanation: "В тексте названы: концентрация, скорость реакции, внимательность, коммуникабельность, хорошая память. Творческий подход не упомянут." },
+            { block: "C", type: "Текст", question: "Где сегодня востребованы экономисты (по тексту)?", options: ["Только в банках", "В строительных, фармацевтических компаниях, ресторанном бизнесе", "Только в государственных органах"], correct: 1, hint: "Разные отрасли экономики", hintUz: "Turli iqtisodiy tarmoqlar", explanation: "«Экономисты требуются в строительных компаниях, фармацевтической промышленности, ресторанном бизнесе»." },
+            { block: "C", type: "Текст", question: "Почему на рынке вакансий переизбыток экономистов?", options: ["Низкая зарплата", "Вузы ежегодно выпускают много специалистов", "Экономисты не нужны"], correct: 1, hint: "Проблема количества выпускников", hintUz: "Bitiruvchilar soni muammosi", explanation: "«Ежегодно вузы выпускают большое количество экономистов. Это создаёт переизбыток специалистов»." },
+            { block: "C", type: "Текст", question: "Какими качествами должен обладать учитель по Д. Лихачёву?", options: ["Только знаниями", "Творческим подходом и любовью к миру", "Только строгостью"], correct: 1, hint: "Воспитывает личностью, знаниями, любовью", hintUz: "Shaxsiyati, bilimlari, sevgisi bilan tarbiyalaydi", explanation: "«Воспитывает личностью своей, своими знаниями и любовью, своим отношением к миру»." }
+        ];
+
+        let currentQuestion = 0;
+        let correctAnswers = 0;
+        let incorrectAnswers = 0;
+        let selectedOption = null;
+        let answered = false;
+        let shuffledQuestions = [];
+        let currentShuffledOptions = [];
+        let answeredQuestions = [];
+        let blockStats = { A: { correct: 0, total: 0 }, B: { correct: 0, total: 0 }, C: { correct: 0, total: 0 } };
+
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            shuffledQuestions = shuffleArray(questions);
+            answeredQuestions = new Array(shuffledQuestions.length).fill(null);
+            countBlocks();
+            renderQuestionMap();
+            renderQuestion();
+        });
+
+        function countBlocks() {
+            shuffledQuestions.forEach(q => { blockStats[q.block].total++; });
+        }
+
+        function showSection(section, btn) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+            document.getElementById(section).classList.add('active');
+            if (btn) btn.classList.add('active');
+        }
+
+        function renderQuestionMap() {
+            const map = document.getElementById('questionMap');
+            map.innerHTML = shuffledQuestions.map((q, i) => {
+                let status = 'unanswered';
+                if (answeredQuestions[i] === true) status = 'correct';
+                else if (answeredQuestions[i] === false) status = 'incorrect';
+                if (i === currentQuestion) status = 'current';
+                return `<div class="map-dot ${status} block-${q.block.toLowerCase()}" onclick="goToQuestion(${i})">${i + 1}</div>`;
+            }).join('');
+        }
+
+        function goToQuestion(index) {
+            if (index < currentQuestion || answered) return;
+            currentQuestion = index;
+            renderQuestion();
+            renderQuestionMap();
+        }
+
+        function renderQuestion() {
+            if (currentQuestion >= shuffledQuestions.length) { showResults(); return; }
+
+            const q = shuffledQuestions[currentQuestion];
+            const card = document.getElementById('questionCard');
+            
+            const optionsWithIndex = q.options.map((opt, i) => ({ text: opt, originalIndex: i }));
+            currentShuffledOptions = shuffleArray(optionsWithIndex);
+            
+            const blockNames = { A: 'Блок А: Виды', B: 'Блок Б: Склонение', C: 'Блок В: Текст' };
+            document.getElementById('blockName').textContent = blockNames[q.block];
+            
+            card.innerHTML = `
+                <div class="question-header">
+                    <span class="question-number">Вопрос ${currentQuestion + 1}</span>
+                    <span class="question-type block-${q.block.toLowerCase()}">${q.type}</span>
+                </div>
+                <div class="question-text">${q.question}</div>
+                <div class="options-container">
+                    ${currentShuffledOptions.map((opt, i) => `
+                        <div class="option" onclick="selectOption(${i})" data-index="${i}">
+                            <span class="option-marker">${String.fromCharCode(65 + i)}</span>
+                            <span class="option-text">${opt.text}</span>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="hint-container">
+                    <button class="hint-btn" onclick="showHint()">
+                        <span class="lamp">💡</span> Подсказка
+                    </button>
+                    <div class="hint-box" id="hintBox">
+                        <div class="hint-label">💡 Подсказка:</div>
+                        <div class="hint-text">${q.hint}</div>
+                        <div class="hint-text-uz">${q.hintUz}</div>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback"></div>
+                <div class="btn-container">
+                    <button class="btn btn-primary" id="checkBtn" onclick="checkAnswer()" disabled>Проверить</button>
+                    <button class="btn btn-next" id="nextBtn" onclick="nextQuestion()" style="display:none;">Дальше →</button>
+                </div>
+            `;
+
+            selectedOption = null;
+            answered = false;
+            updateProgress();
+            renderQuestionMap();
+        }
+
+        function selectOption(index) {
+            if (answered) return;
+            document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+            document.querySelector(`.option[data-index="${index}"]`).classList.add('selected');
+            selectedOption = index;
+            document.getElementById('checkBtn').disabled = false;
+        }
+
+        function showHint() { document.getElementById('hintBox').classList.toggle('show'); }
+
+        function checkAnswer() {
+            if (selectedOption === null || answered) return;
+            
+            answered = true;
+            const q = shuffledQuestions[currentQuestion];
+            const options = document.querySelectorAll('.option');
+            const feedback = document.getElementById('feedback');
+            
+            const selectedOriginalIndex = currentShuffledOptions[selectedOption].originalIndex;
+            options.forEach(opt => opt.classList.add('disabled'));
+            
+            const correctShuffledIndex = currentShuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+            
+            if (selectedOriginalIndex === q.correct) {
+                correctAnswers++;
+                blockStats[q.block].correct++;
+                answeredQuestions[currentQuestion] = true;
+                options[selectedOption].classList.add('correct');
+                feedback.className = 'feedback show correct';
+                feedback.innerHTML = `<div class="feedback-title">✅ Правильно!</div><div class="feedback-text">${q.explanation}</div>`;
+            } else {
+                incorrectAnswers++;
+                answeredQuestions[currentQuestion] = false;
+                options[selectedOption].classList.add('incorrect');
+                options[correctShuffledIndex].classList.add('correct');
+                feedback.className = 'feedback show incorrect';
+                feedback.innerHTML = `<div class="feedback-title">❌ Неправильно</div><div class="feedback-text">Правильный ответ: <strong>${q.options[q.correct]}</strong></div><div class="feedback-explanation">${q.explanation}</div>`;
+            }
+            
+            document.getElementById('checkBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'inline-flex';
+            document.getElementById('correctCount').textContent = correctAnswers;
+            document.getElementById('incorrectCount').textContent = incorrectAnswers;
+            renderQuestionMap();
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion >= shuffledQuestions.length) { showResults(); } 
+            else { renderQuestion(); }
+        }
+
+        function updateProgress() {
+            document.getElementById('currentQ').textContent = currentQuestion + 1;
+            document.getElementById('totalQ').textContent = shuffledQuestions.length;
+            
+            const percent = Math.round((currentQuestion / shuffledQuestions.length) * 100);
+            document.getElementById('progressPercent').textContent = percent + '%';
+            
+            const circle = document.getElementById('progressCircle');
+            const circumference = 2 * Math.PI * 30;
+            const offset = circumference - (percent / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+        }
+
+        function showResults() {
+            document.getElementById('resultsTab').style.display = 'inline-flex';
+            showSection('results', document.getElementById('resultsTab'));
+            
+            const score = correctAnswers;
+            const total = shuffledQuestions.length;
+            const percent = Math.round((score / total) * 100);
+            
+            document.getElementById('resultsScore').textContent = `${score}/${total}`;
+            document.getElementById('statA').textContent = `${blockStats.A.correct}/${blockStats.A.total}`;
+            document.getElementById('statB').textContent = `${blockStats.B.correct}/${blockStats.B.total}`;
+            document.getElementById('statC').textContent = `${blockStats.C.correct}/${blockStats.C.total}`;
+            
+            let icon, title, recommendation;
+            if (percent >= 90) {
+                icon = '🏆'; title = 'Превосходно!';
+                recommendation = 'Вы отлично усвоили тему «Имя числительное»! Переходите к собирательным числительным.';
+            } else if (percent >= 70) {
+                icon = '🎉'; title = 'Хорошо!';
+                recommendation = 'Хороший результат! Повторите склонение составных числительных.';
+            } else if (percent >= 50) {
+                icon = '📚'; title = 'Неплохо!';
+                const weakBlock = Object.entries(blockStats).sort((a, b) => (a[1].correct/a[1].total) - (b[1].correct/b[1].total))[0][0];
+                const blockNames = { A: 'видам числительных', B: 'склонению', C: 'тексту о профессиях' };
+                recommendation = `Уделите внимание ${blockNames[weakBlock]}. Перечитайте правила и попробуйте снова.`;
+            } else {
+                icon = '💪'; title = 'Нужно повторить';
+                recommendation = 'Внимательно изучите правила склонения количественных и порядковых числительных.';
+            }
+            
+            document.getElementById('resultsIcon').textContent = icon;
+            document.getElementById('resultsTitle').textContent = title;
+            document.getElementById('recommendationText').textContent = recommendation;
+        }
+
+        function restartTest() {
+            currentQuestion = 0;
+            correctAnswers = 0;
+            incorrectAnswers = 0;
+            blockStats = { A: { correct: 0, total: 0 }, B: { correct: 0, total: 0 }, C: { correct: 0, total: 0 } };
+            document.getElementById('correctCount').textContent = 0;
+            document.getElementById('incorrectCount').textContent = 0;
+            document.getElementById('resultsTab').style.display = 'none';
+            shuffledQuestions = shuffleArray(questions);
+            answeredQuestions = new Array(shuffledQuestions.length).fill(null);
+            countBlocks();
+            showSection('test', document.querySelector('.tab-btn:nth-child(2)'));
+            renderQuestionMap();
+            renderQuestion();
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's')) { e.preventDefault(); }
+        });
+    </script>
+</body>
+</html>
