@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Неопределённо-личные предложения | 11 класс В1+ | Великий шёлковый путь</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* === ФИРМЕННЫЙ2 ENHANCED: Шёлковый путь === */
+            --header-dark: linear-gradient(135deg, #5d4037 0%, #3e2723 50%, #1b0000 100%);
+            --header-accent: #ffb74d;
+            
+            --silk-gold: #ffd54f;
+            --silk-bronze: #cd7f32;
+            --silk-sand: #f5e6d3;
+            
+            --azure-glow: rgba(255, 183, 77, 0.25);
+            --azure-border: rgba(255, 183, 77, 0.45);
+            --azure-light: rgba(255, 183, 77, 0.12);
+            
+            --ending-color: #c62828;
+            --ending-bg: rgba(198, 40, 40, 0.1);
+            
+            --bg-main: #faf8f5;
+            --bg-card: #ffffff;
+            --bg-secondary: #fefcf9;
+            
+            --text-dark: #3e2723;
+            --text-medium: #5d4037;
+            --text-light: #8d6e63;
+            
+            --correct: #2e7d32;
+            --correct-bg: rgba(46, 125, 50, 0.1);
+            --correct-light: rgba(46, 125, 50, 0.05);
+            --incorrect: #c62828;
+            --incorrect-bg: rgba(198, 40, 40, 0.1);
+            
+            --hint-bg: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            --hint-border: #ffa000;
+            --hint-text: #e65100;
+            
+            --block-a: #1565c0;
+            --block-b: #00838f;
+            --block-c: #6a1b9a;
+            --block-d: #c62828;
+            
+            --shadow-sm: 0 2px 8px rgba(62, 39, 35, 0.08), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(62, 39, 35, 0.12), 0 2px 6px rgba(0,0,0,0.05);
+            --shadow-lg: 0 8px 32px rgba(62, 39, 35, 0.15), 0 4px 12px rgba(0,0,0,0.06);
+            
+            --radius: 24px;
+            --radius-md: 16px;
+            --radius-sm: 12px;
+            
+            --font-base: 1.35rem;
+            --font-lg: 1.6rem;
+            --font-xl: 2rem;
+            --font-xxl: 2.5rem;
+            --font-title: 2.8rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg-main);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: var(--font-base);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+
+        /* === HEADER с караванной темой === */
+        .header {
+            background: var(--header-dark);
+            border-radius: var(--radius);
+            padding: 40px 35px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '🐪🐫🐪🐫🐪';
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            font-size: 1.8rem;
+            opacity: 0.3;
+            animation: caravan 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes caravan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(255, 183, 77, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 183, 77, 0.2);
+            border: 2px solid rgba(255, 183, 77, 0.4);
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: var(--font-base);
+            font-weight: 800;
+            color: var(--header-accent);
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: var(--font-title);
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            color: var(--header-accent);
+            font-size: var(--font-xl);
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle-uz {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: var(--font-lg);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            margin-top: 6px;
+            font-style: italic;
+        }
+
+        .header .route-icons {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* === TABS === */
+        .tabs-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg-main);
+            padding: 15px 0;
+            margin: -15px 0 20px 0;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 14px 28px;
+            border: 2px solid var(--azure-border);
+            background: var(--bg-card);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 800;
+            color: var(--text-dark);
+            transition: all 0.25s ease;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--silk-gold);
+        }
+
+        .tab-btn.active {
+            background: var(--header-dark);
+            color: #ffffff;
+            border-color: transparent;
+        }
+
+        .section {
+            display: none;
+            animation: slideIn 0.35s ease;
+        }
+
+        .section.active { display: block; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* === CARDS === */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 35px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(255, 183, 77, 0.2);
+            margin-bottom: 25px;
+        }
+
+        .card-title {
+            font-family: 'Merriweather', serif;
+            font-size: var(--font-xxl);
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid var(--azure-light);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .card-title .icon { font-size: var(--font-xxl); }
+        .card-title .uz {
+            font-size: var(--font-lg);
+            color: var(--text-light);
+            font-style: italic;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+        }
+
+        /* === RULE BOXES === */
+        .rule-box {
+            background: linear-gradient(135deg, var(--silk-sand) 0%, #fff9f0 100%);
+            border-left: 5px solid var(--silk-bronze);
+            padding: 22px 28px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin-bottom: 22px;
+        }
+
+        .rule-title {
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-size: var(--font-lg);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rule-content {
+            color: var(--text-medium);
+            font-size: var(--font-base);
+            line-height: 2;
+        }
+
+        .rule-content-uz {
+            color: var(--text-light);
+            font-size: calc(var(--font-base) - 0.1rem);
+            font-style: italic;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--silk-bronze);
+        }
+
+        .highlight {
+            color: var(--ending-color);
+            font-weight: 800;
+            background: var(--ending-bg);
+            padding: 3px 10px;
+            border-radius: 6px;
+        }
+
+        .verb-form {
+            color: #1565c0;
+            font-weight: 700;
+            background: rgba(21, 101, 192, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* === GRAMMAR TABLE === */
+        .grammar-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 22px 0;
+            font-size: var(--font-base);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .grammar-table th,
+        .grammar-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--azure-light);
+        }
+
+        .grammar-table th {
+            background: var(--header-dark);
+            color: #ffffff;
+            font-weight: 800;
+            font-size: var(--font-lg);
+        }
+
+        .grammar-table tr:last-child td { border-bottom: none; }
+        .grammar-table tr:nth-child(even) { background: var(--bg-secondary); }
+        .grammar-table tr:hover { background: var(--azure-light); }
+
+        /* === EXAMPLE BOX === */
+        .example-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            padding: 22px;
+            border-radius: var(--radius-md);
+            margin-top: 18px;
+            border: 1px dashed var(--correct);
+        }
+
+        .example-title {
+            font-weight: 800;
+            color: var(--correct);
+            margin-bottom: 12px;
+            font-size: var(--font-lg);
+        }
+
+        .example-item {
+            padding: 12px 0;
+            border-bottom: 1px dotted rgba(46, 125, 50, 0.3);
+            font-size: var(--font-base);
+            line-height: 1.9;
+        }
+
+        .example-item:last-child { border-bottom: none; }
+
+        .example-uz {
+            color: var(--text-light);
+            font-style: italic;
+            display: block;
+            margin-top: 6px;
+            font-size: calc(var(--font-base) - 0.1rem);
+        }
+
+        /* === PROGRESS BAR ENHANCED === */
+        .progress-container {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            border: 1px solid rgba(255, 183, 77, 0.2);
+        }
+
+        .progress-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .circular-progress {
+            position: relative;
+            width: 75px;
+            height: 75px;
+        }
+
+        .circular-progress svg { transform: rotate(-90deg); }
+        .circular-progress circle { fill: none; stroke-width: 6; }
+        .circular-progress .bg { stroke: #e0d5c8; }
+        .circular-progress .progress {
+            stroke: url(#progressGradient);
+            stroke-linecap: round;
+            transition: stroke-dashoffset 0.5s ease;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 900;
+            font-size: var(--font-base);
+            color: var(--text-dark);
+        }
+
+        .progress-info { display: flex; flex-direction: column; gap: 5px; }
+        .progress-label { font-weight: 800; color: var(--text-dark); font-size: var(--font-lg); }
+        .progress-sublabel { color: var(--text-light); font-size: calc(var(--font-base) - 0.1rem); }
+
+        .progress-score { display: flex; gap: 20px; }
+        .score-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 800;
+            font-size: var(--font-lg);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+        }
+
+        .score-correct { color: var(--correct); background: var(--correct-light); }
+        .score-incorrect { color: var(--incorrect); background: rgba(198, 40, 40, 0.05); }
+
+        /* === QUESTION MAP ENHANCED === */
+        .question-map {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--silk-sand) 0%, #fff 100%);
+            border-radius: var(--radius-md);
+            margin-bottom: 20px;
+            justify-content: center;
+            border: 1px solid rgba(255, 183, 77, 0.3);
+        }
+
+        .map-dot {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .map-dot.unanswered { background: #e0d5c8; color: var(--text-light); }
+        .map-dot.current { 
+            background: var(--header-dark); 
+            color: #ffffff; 
+            transform: scale(1.2); 
+            box-shadow: 0 4px 12px rgba(62, 39, 35, 0.3);
+        }
+        .map-dot.correct { background: var(--correct); color: #ffffff; }
+        .map-dot.incorrect { background: var(--incorrect); color: #ffffff; }
+        .map-dot.block-a { border-color: var(--block-a); }
+        .map-dot.block-b { border-color: var(--block-b); }
+        .map-dot.block-c { border-color: var(--block-c); }
+        .map-dot.block-d { border-color: var(--block-d); }
+
+        /* === QUESTION CARD === */
+        .question-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 35px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 183, 77, 0.2);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .question-number {
+            background: var(--header-dark);
+            color: #ffffff;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: 900;
+            font-size: var(--font-base);
+        }
+
+        .question-type {
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: calc(var(--font-base) - 0.1rem);
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .question-type.block-a { background: var(--block-a); }
+        .question-type.block-b { background: var(--block-b); }
+        .question-type.block-c { background: var(--block-c); }
+        .question-type.block-d { background: var(--block-d); }
+
+        /* === DIFFICULTY BADGE === */
+        .difficulty-badge {
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .difficulty-easy { background: #e8f5e9; color: #2e7d32; }
+        .difficulty-medium { background: #fff3e0; color: #e65100; }
+        .difficulty-hard { background: #ffebee; color: #c62828; }
+
+        .question-text {
+            font-size: var(--font-xl);
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-weight: 600;
+        }
+
+        .question-context {
+            background: linear-gradient(135deg, #fff8e1 0%, #fff3e0 100%);
+            padding: 15px 20px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--silk-gold);
+            font-style: italic;
+            color: var(--text-medium);
+        }
+
+        .question-context .city-tag {
+            display: inline-block;
+            background: var(--silk-bronze);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-right: 8px;
+            font-style: normal;
+        }
+
+        /* === OPTIONS === */
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 18px 22px;
+            background: var(--bg-card);
+            border: 2px solid #e0d5c8;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .option:hover { 
+            transform: translateX(8px); 
+            border-color: var(--silk-gold); 
+            box-shadow: var(--shadow-sm);
+            background: var(--silk-sand);
+        }
+        .option.selected { border-color: var(--text-dark); background: var(--azure-light); }
+        .option.correct { border-color: var(--correct); background: var(--correct-bg); }
+        .option.incorrect { border-color: var(--incorrect); background: var(--incorrect-bg); }
+        .option.disabled { pointer-events: none; opacity: 0.7; }
+
+        .option-marker {
+            width: 44px;
+            height: 44px;
+            background: var(--bg-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-right: 18px;
+            flex-shrink: 0;
+            font-size: var(--font-base);
+            transition: all 0.25s ease;
+        }
+
+        .option.selected .option-marker { background: var(--text-dark); color: #ffffff; }
+        .option.correct .option-marker { background: var(--correct); color: #ffffff; }
+        .option.incorrect .option-marker { background: var(--incorrect); color: #ffffff; }
+        .option-text { font-size: var(--font-lg); font-weight: 700; color: var(--text-dark); }
+
+        /* === HINT === */
+        .hint-container { margin: 22px 0; }
+
+        .hint-btn {
+            background: var(--hint-bg);
+            border: 2px solid var(--hint-border);
+            padding: 12px 22px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 800;
+            color: var(--hint-text);
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hint-btn:hover { transform: scale(1.02); box-shadow: 0 4px 15px rgba(255, 160, 0, 0.3); }
+        .hint-btn .lamp { font-size: 1.3em; animation: pulse 2s infinite; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        .hint-box {
+            display: none;
+            background: var(--hint-bg);
+            border: 2px solid var(--hint-border);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            margin-top: 15px;
+        }
+
+        .hint-box.show { display: block; animation: slideIn 0.3s ease; }
+        .hint-label { font-weight: 900; color: var(--hint-text); margin-bottom: 8px; font-size: var(--font-base); }
+        .hint-text { color: var(--text-medium); font-size: var(--font-base); line-height: 1.7; }
+        .hint-text-uz { color: var(--text-light); font-style: italic; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--hint-border); font-size: calc(var(--font-base) - 0.1rem); }
+
+        /* === FEEDBACK === */
+        .feedback {
+            display: none;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            margin: 22px 0;
+        }
+
+        .feedback.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback.correct { background: var(--correct-bg); border: 2px solid var(--correct); }
+        .feedback.incorrect { background: var(--incorrect-bg); border: 2px solid var(--incorrect); }
+        .feedback-title { font-weight: 900; font-size: var(--font-xl); margin-bottom: 10px; }
+        .feedback.correct .feedback-title { color: var(--correct); }
+        .feedback.incorrect .feedback-title { color: var(--incorrect); }
+        .feedback-text { color: var(--text-medium); font-size: var(--font-base); line-height: 1.7; }
+        .feedback-explanation { margin-top: 12px; padding-top: 12px; border-top: 1px dashed currentColor; font-size: calc(var(--font-base) - 0.05rem); }
+        .feedback-fun-fact { margin-top: 15px; padding: 12px; background: rgba(255, 215, 0, 0.15); border-radius: 8px; font-size: calc(var(--font-base) - 0.1rem); }
+        .feedback-fun-fact strong { color: var(--silk-bronze); }
+
+        /* === BUTTONS === */
+        .btn-container { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+        .btn {
+            padding: 16px 35px;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 800;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary { background: var(--header-dark); color: #ffffff; }
+        .btn-primary:hover:not(:disabled) { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+        .btn-next { background: linear-gradient(135deg, var(--correct) 0%, #1b5e20 100%); color: #ffffff; }
+        .btn-next:hover { transform: translateX(5px); }
+        .btn-restart { background: linear-gradient(135deg, var(--silk-gold) 0%, var(--silk-bronze) 100%); color: #3e2723; }
+
+        /* === RESULTS === */
+        .results-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 45px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid rgba(255, 183, 77, 0.3);
+        }
+
+        .results-icon { font-size: 5rem; margin-bottom: 20px; }
+        .results-score {
+            font-size: 4rem;
+            font-weight: 900;
+            background: var(--header-dark);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .results-title {
+            font-family: 'Merriweather', serif;
+            font-size: var(--font-xxl);
+            color: var(--text-dark);
+            margin-bottom: 25px;
+        }
+
+        .results-stats { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+
+        .stat-block {
+            background: var(--bg-secondary);
+            padding: 18px 22px;
+            border-radius: var(--radius-md);
+            min-width: 120px;
+            border-left: 4px solid;
+        }
+
+        .stat-block.block-a { border-color: var(--block-a); }
+        .stat-block.block-b { border-color: var(--block-b); }
+        .stat-block.block-c { border-color: var(--block-c); }
+        .stat-block.block-d { border-color: var(--block-d); }
+        .stat-label { font-size: calc(var(--font-base) - 0.15rem); color: var(--text-light); margin-bottom: 5px; }
+        .stat-value { font-size: var(--font-xl); font-weight: 900; color: var(--text-dark); }
+
+        .results-recommendation {
+            background: var(--hint-bg);
+            border: 2px solid var(--hint-border);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .recommendation-title { font-weight: 800; color: var(--hint-text); margin-bottom: 8px; font-size: var(--font-base); }
+        .recommendation-text { color: var(--text-medium); font-size: var(--font-base); }
+
+        .results-achievement {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--silk-gold) 0%, var(--silk-bronze) 100%);
+            padding: 12px 25px;
+            border-radius: 30px;
+            color: #3e2723;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-size: var(--font-lg);
+        }
+
+        .author-info {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--azure-light);
+            text-align: center;
+            font-size: calc(var(--font-base) - 0.1rem);
+            color: var(--text-light);
+        }
+
+        .author-info-name { font-weight: 800; color: var(--text-dark); }
+
+        /* === FOOTER === */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-light);
+            font-size: var(--font-base);
+        }
+
+        .footer-brand { font-weight: 700; color: var(--text-medium); }
+
+        @media (max-width: 900px) {
+            :root {
+                --font-base: 1.15rem;
+                --font-lg: 1.35rem;
+                --font-xl: 1.7rem;
+                --font-xxl: 2rem;
+                --font-title: 2.3rem;
+            }
+            .container { padding: 15px; }
+            .header { padding: 30px 20px; }
+            .card, .question-card { padding: 25px; }
+            .circular-progress { width: 60px; height: 60px; }
+            .map-dot { width: 32px; height: 32px; font-size: 0.85rem; }
+        }
+
+        body { -webkit-touch-callout: none; }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;">
+    <svg width="0" height="0">
+        <defs>
+            <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#5d4037"/>
+                <stop offset="100%" style="stop-color:#ffb74d"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <div class="container">
+        <header class="header">
+            <div class="header-badge">
+                <span>🏛️</span>
+                <span>11 класс • Уровень В1+</span>
+            </div>
+            <h1>По следам Великого шёлкового пути</h1>
+            <div class="subtitle">Неопределённо-личные предложения</div>
+            <div class="subtitle-uz">Shaxsi noaniq gaplar • Buyuk Ipak yo'li</div>
+            <div class="route-icons">🏰 Самарканд → 🕌 Бухара → 🏜️ Хива → 🌅 Ташкент</div>
+        </header>
+
+        <div class="tabs-wrapper">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showSection('grammar', this)">
+                    <span>📖</span> Правила
+                </button>
+                <button class="tab-btn" onclick="showSection('test', this)">
+                    <span>✏️</span> Тест (28)
+                </button>
+                <button class="tab-btn" onclick="showSection('results', this)" id="resultsTab" style="display:none;">
+                    <span>📊</span> Результаты
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== ПРАВИЛА ===== -->
+        <section id="grammar" class="section active">
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="icon">📜</span> 
+                    Неопределённо-личные предложения
+                    <span class="uz">(Shaxsi noaniq gaplar)</span>
+                </h2>
+                
+                <div class="rule-box">
+                    <div class="rule-title">📌 Определение</div>
+                    <div class="rule-content">
+                        <strong>Неопределённо-личные предложения</strong> — это односоставные предложения, в которых главный член (сказуемое) выражен глаголом в форме <span class="highlight">3-го лица множественного числа</span> настоящего/будущего времени или в форме <span class="highlight">множественного числа прошедшего времени</span>.
+                    </div>
+                    <div class="rule-content-uz">
+                        Shaxsi noaniq gaplar — bosh bo'lak (kesim) hozirgi/kelasi zamonda <strong>3-shaxs ko'plik</strong> yoki o'tgan zamonda <strong>ko'plik</strong> shaklida ifodalangan bir tarkibli gaplardir.
+                    </div>
+                </div>
+
+                <div class="rule-box">
+                    <div class="rule-title">📌 Главная особенность</div>
+                    <div class="rule-content">
+                        В неопределённо-личных предложениях главное внимание уделяется <strong>действию</strong>, а действующее лицо — <strong>неопределённое</strong> (неизвестно, кто именно совершает действие).<br><br>
+                        <em>«По улицам слона водили.»</em> (И.А. Крылов) — Кто водил? Неизвестно, неважно.
+                    </div>
+                </div>
+
+                <table class="grammar-table">
+                    <tr>
+                        <th>Время</th>
+                        <th>Форма глагола</th>
+                        <th>Пример</th>
+                    </tr>
+                    <tr>
+                        <td>Настоящее</td>
+                        <td><span class="verb-form">3 л. мн.ч. (-ут/-ют, -ат/-ят)</span></td>
+                        <td>В Бухаре <span class="highlight">продают</span> ковры.</td>
+                    </tr>
+                    <tr>
+                        <td>Будущее</td>
+                        <td><span class="verb-form">3 л. мн.ч. (будут + инф.)</span></td>
+                        <td>Скоро <span class="highlight">построят</span> новую дорогу.</td>
+                    </tr>
+                    <tr>
+                        <td>Прошедшее</td>
+                        <td><span class="verb-form">мн.ч. (-ли)</span></td>
+                        <td>В древности здесь <span class="highlight">торговали</span> шёлком.</td>
+                    </tr>
+                </table>
+
+                <div class="rule-box">
+                    <div class="rule-title">📌 Сравнение типов предложений</div>
+                    <div class="rule-content">
+                        <strong>Двусоставное:</strong> <em>Туристы осматривают достопримечательности.</em> (есть подлежащее)<br><br>
+                        <strong>Неопределённо-личное:</strong> <em>Туристам показывают достопримечательности.</em> (нет подлежащего, неизвестно кто показывает)<br><br>
+                        <strong>Безличное:</strong> <em>Темнеет. Холодает.</em> (действие без лица)
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">🏛️ Примеры на тему «Великий шёлковый путь»:</div>
+                    <div class="example-item">
+                        В Самарканде <span class="highlight">строили</span> величественные мечети и медресе.
+                        <span class="example-uz">Samarqandda ulug'vor masjidlar va madrasalar qurishgan.</span>
+                    </div>
+                    <div class="example-item">
+                        В караван-сараях <span class="highlight">принимали</span> купцов из Китая, Индии и Персии.
+                        <span class="example-uz">Karvonsaroylarda Xitoy, Hindiston va Forsdan kelgan savdogarlarni qabul qilishgan.</span>
+                    </div>
+                    <div class="example-item">
+                        Туристов <span class="highlight">приглашают</span> посетить древние города.
+                        <span class="example-uz">Turistlarni qadimiy shaharlarni ziyorat qilishga taklif qilishmoqda.</span>
+                    </div>
+                    <div class="example-item">
+                        В Хиве <span class="highlight">сохранили</span> уникальную архитектуру.
+                        <span class="example-uz">Xivada noyob me'morchilikni saqlab qolishgan.</span>
+                    </div>
+                </div>
+
+                <div class="rule-box">
+                    <div class="rule-title">📌 Обобщённо-личные предложения (пословицы)</div>
+                    <div class="rule-content">
+                        Многие неопределённо-личные предложения имеют <strong>обобщённое значение</strong> и часто используются в пословицах:<br><br>
+                        <em>Цыплят по осени <span class="highlight">считают</span>.</em><br>
+                        <em>Что имеем, не храним, потерявши — <span class="highlight">плачем</span>.</em><br>
+                        <em>Не в свои сани не <span class="highlight">садись</span>.</em>
+                    </div>
+                </div>
+
+                <div class="author-info">
+                    <span class="author-info-name">Бахтияр Хамидов</span> • Республика Узбекистан
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ТЕСТ ===== -->
+        <section id="test" class="section">
+            <div class="progress-container">
+                <div class="progress-left">
+                    <div class="circular-progress">
+                        <svg width="75" height="75">
+                            <circle class="bg" cx="37.5" cy="37.5" r="32"></circle>
+                            <circle class="progress" cx="37.5" cy="37.5" r="32" 
+                                stroke-dasharray="201" 
+                                stroke-dashoffset="201" 
+                                id="progressCircle"></circle>
+                        </svg>
+                        <div class="progress-text" id="progressPercent">0%</div>
+                    </div>
+                    <div class="progress-info">
+                        <span class="progress-label">Вопрос <span id="currentQ">1</span> / <span id="totalQ">28</span></span>
+                        <span class="progress-sublabel" id="blockName">Блок А: Определение типа</span>
+                    </div>
+                </div>
+                <div class="progress-score">
+                    <span class="score-item score-correct">✓ <span id="correctCount">0</span></span>
+                    <span class="score-item score-incorrect">✗ <span id="incorrectCount">0</span></span>
+                </div>
+            </div>
+
+            <div class="question-map" id="questionMap"></div>
+            <div class="question-card" id="questionCard"></div>
+        </section>
+
+        <!-- ===== РЕЗУЛЬТАТЫ ===== -->
+        <section id="results" class="section">
+            <div class="results-card">
+                <div class="results-icon" id="resultsIcon">🏆</div>
+                <div class="results-achievement" id="resultsAchievement">🐪 Путешественник по Шёлковому пути</div>
+                <div class="results-score" id="resultsScore">0/28</div>
+                <h2 class="results-title" id="resultsTitle">Результат</h2>
+                
+                <div class="results-stats">
+                    <div class="stat-block block-a">
+                        <div class="stat-label">Блок А</div>
+                        <div class="stat-value" id="statA">0/7</div>
+                    </div>
+                    <div class="stat-block block-b">
+                        <div class="stat-label">Блок Б</div>
+                        <div class="stat-value" id="statB">0/7</div>
+                    </div>
+                    <div class="stat-block block-c">
+                        <div class="stat-label">Блок В</div>
+                        <div class="stat-value" id="statC">0/7</div>
+                    </div>
+                    <div class="stat-block block-d">
+                        <div class="stat-label">Блок Г</div>
+                        <div class="stat-value" id="statD">0/7</div>
+                    </div>
+                </div>
+
+                <div class="results-recommendation">
+                    <div class="recommendation-title">💡 Рекомендация:</div>
+                    <div class="recommendation-text" id="recommendationText">
+                        Продолжайте изучать односоставные предложения!
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-restart" onclick="restartTest()">🔄 Начать заново</button>
+                    <button class="btn btn-primary" onclick="showSection('grammar', document.querySelector('.tab-btn'))">📖 К правилам</button>
+                </div>
+
+                <div class="author-info">
+                    <span class="author-info-name">Бахтияр Хамидов</span> • Республика Узбекистан
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-brand">© 2025 Бахтияр Хамидов • Республика Узбекистан | @rki_uz_bot</div>
+        </footer>
+    </div>
+
+    <script>
+        const questions = [
+            // БЛОК А: Определение типа предложения (7 вопросов)
+            { block: "A", type: "Тип предложения", difficulty: "easy", city: "Самарканд",
+              question: "Определите тип предложения: «В Самарканде строили величественные мечети.»",
+              options: ["Двусоставное", "Неопределённо-личное", "Безличное"],
+              correct: 1, hint: "Есть ли подлежащее? Кто строил — известно?", hintUz: "Ega bormi? Kim qurgan — ma'lummi?",
+              explanation: "Нет подлежащего, глагол «строили» в форме мн.ч. прош. вр., действующее лицо неопределённое.",
+              funFact: "Регистан в Самарканде строили более 200 лет!" },
+            
+            { block: "A", type: "Тип предложения", difficulty: "easy", city: "Бухара",
+              question: "«Через Бухару проходил Великий шёлковый путь.» — это предложение:",
+              options: ["Неопределённо-личное", "Двусоставное", "Определённо-личное"],
+              correct: 1, hint: "Найдите подлежащее и сказуемое", hintUz: "Ega va kesimni toping",
+              explanation: "Есть подлежащее «путь» и сказуемое «проходил» — двусоставное предложение.",
+              funFact: "Бухара была одним из главных центров торговли на Шёлковом пути." },
+            
+            { block: "A", type: "Тип предложения", difficulty: "medium", city: "Хива",
+              question: "«В Хиве сохранили уникальную архитектуру.» — это:",
+              options: ["Безличное", "Неопределённо-личное", "Двусоставное"],
+              correct: 1, hint: "Кто сохранил? Известно ли действующее лицо?", hintUz: "Kim saqlagan? Bajaruvchi ma'lummi?",
+              explanation: "Глагол «сохранили» в форме мн.ч. прош. вр., действующее лицо неопределённое — неопределённо-личное.",
+              funFact: "Ичан-Кала в Хиве — первый объект Узбекистана в списке ЮНЕСКО (1990)." },
+            
+            { block: "A", type: "Тип предложения", difficulty: "easy", city: "Ташкент",
+              question: "«Вечереет.» — это предложение:",
+              options: ["Неопределённо-личное", "Определённо-личное", "Безличное"],
+              correct: 2, hint: "Может ли быть подлежащее? Есть ли лицо?", hintUz: "Ega bo'lishi mumkinmi? Shaxs bormi?",
+              explanation: "Безличный глагол «вечереет» — нет и не может быть подлежащего.",
+              funFact: "Ташкент — самый большой город Центральной Азии." },
+            
+            { block: "A", type: "Тип предложения", difficulty: "medium", city: "Шахрисабз",
+              question: "«Туристов приглашают посетить дворец Ак-Сарай.» — это:",
+              options: ["Двусоставное", "Безличное", "Неопределённо-личное"],
+              correct: 2, hint: "Кто приглашает? Глагол в какой форме?", hintUz: "Kim taklif qilmoqda? Fe'l qanday shaklda?",
+              explanation: "Глагол «приглашают» — 3 л. мн.ч. наст. вр., действующее лицо неопределённое.",
+              funFact: "Ак-Сарай строился 24 года по приказу Амира Темура." },
+            
+            { block: "A", type: "Тип предложения", difficulty: "hard", city: "Коканд",
+              question: "«Мне не верится, что караваны шли здесь.» Укажите тип выделенной части:",
+              options: ["Неопределённо-личное", "Безличное", "Определённо-личное"],
+              correct: 1, hint: "«Не верится» — есть ли лицо?", hintUz: "«Ishonmayapman» — shaxs bormi?",
+              explanation: "«Мне не верится» — безличное (состояние человека).",
+              funFact: "Кокандское ханство было важным торговым центром XIX века." },
+            
+            { block: "A", type: "Тип предложения", difficulty: "medium", city: "Термез",
+              question: "«На раскопках нашли древние монеты.» — это:",
+              options: ["Двусоставное", "Неопределённо-личное", "Назывное"],
+              correct: 1, hint: "Кто нашёл — указано?", hintUz: "Kim topgan — ko'rsatilganmi?",
+              explanation: "Глагол «нашли» в форме мн.ч. прош. вр., действующее лицо неопределённое.",
+              funFact: "Термез — один из древнейших городов мира (более 2500 лет)." },
+
+            // БЛОК Б: Формы глагола (7 вопросов)
+            { block: "B", type: "Форма глагола", difficulty: "easy", city: "Самарканд",
+              question: "В каком предложении глагол стоит в форме неопределённо-личного предложения?",
+              options: ["Я вижу минарет.", "Здесь видят красоту.", "Минарет виден издалека."],
+              correct: 1, hint: "3 л. мн.ч. = они видят", hintUz: "3-shaxs ko'plik = ular ko'rmoqda",
+              explanation: "«Видят» — 3 л. мн.ч. наст. вр., форма неопределённо-личного предложения.",
+              funFact: "Минарет Улугбека виден за несколько километров." },
+            
+            { block: "B", type: "Форма глагола", difficulty: "medium", city: "Бухара",
+              question: "Выберите глагол в форме, характерной для неопределённо-личных предложений (прош. вр.):",
+              options: ["торговал", "торговали", "торговать"],
+              correct: 1, hint: "Прошедшее время, множественное число", hintUz: "O'tgan zamon, ko'plik",
+              explanation: "«Торговали» — мн.ч. прош. вр. (они торговали) — форма для неопр.-личн. предложений.",
+              funFact: "В Бухаре торговали более чем 40 видами шёлка." },
+            
+            { block: "B", type: "Форма глагола", difficulty: "easy", city: "Хива",
+              question: "Какая форма глагола нужна: «В музее ... древние рукописи.» (хранить)",
+              options: ["хранит", "хранят", "хранили"],
+              correct: 1, hint: "Настоящее время, 3 л. мн.ч.", hintUz: "Hozirgi zamon, 3-shaxs ko'plik",
+              explanation: "«Хранят» — 3 л. мн.ч. наст. вр., неопределённо-личное предложение.",
+              funFact: "В Хиве хранятся рукописи Аль-Хорезми — отца алгебры." },
+            
+            { block: "B", type: "Форма глагола", difficulty: "medium", city: "Ташкент",
+              question: "Преобразуйте: «Археологи исследуют руины.» → неопределённо-личное:",
+              options: ["Руины исследуются.", "Здесь исследуют руины.", "Исследование руин."],
+              correct: 1, hint: "Убрать подлежащее, оставить 3 л. мн.ч.", hintUz: "Egani olib tashlang, 3-shaxs ko'plik qoldiring",
+              explanation: "«Исследуют» без подлежащего = неопределённо-личное.",
+              funFact: "В Ташкенте нашли руины древнего города Чач (II век до н.э.)." },
+            
+            { block: "B", type: "Форма глагола", difficulty: "hard", city: "Нукус",
+              question: "«В будущем здесь ... новый музей.» Выберите форму для неопр.-личн.:",
+              options: ["построится", "построят", "будет построен"],
+              correct: 1, hint: "Будущее время, 3 л. мн.ч.", hintUz: "Kelasi zamon, 3-shaxs ko'plik",
+              explanation: "«Построят» — 3 л. мн.ч. буд. вр., неопределённо-личное.",
+              funFact: "Музей Савицкого в Нукусе — второе по величине собрание русского авангарда." },
+            
+            { block: "B", type: "Форма глагола", difficulty: "medium", city: "Фергана",
+              question: "В каком варианте глагол НЕ может быть в неопределённо-личном предложении?",
+              options: ["говорят", "сказали", "светает"],
+              correct: 2, hint: "Безличный глагол не имеет лица", hintUz: "Shaxssiz fe'lning shaxsi yo'q",
+              explanation: "«Светает» — безличный глагол, не может быть в неопределённо-личном предложении.",
+              funFact: "Ферганская долина — один из древнейших центров земледелия." },
+            
+            { block: "B", type: "Форма глагола", difficulty: "hard", city: "Карши",
+              question: "«Раньше караваны ... месяцами.» Выберите форму глагола «ждать»:",
+              options: ["ждало", "ждали", "ждёт"],
+              correct: 1, hint: "Прошедшее время, мн.ч.", hintUz: "O'tgan zamon, ko'plik",
+              explanation: "«Ждали» — мн.ч. прош. вр. (кто ждал — неизвестно).",
+              funFact: "Путь из Китая в Рим занимал от 1 до 3 лет." },
+
+            // БЛОК В: Текст о Шёлковом пути (7 вопросов)
+            { block: "C", type: "Текст", difficulty: "easy", city: "Бухара",
+              question: "По тексту учебника: «Через Бухару проходил...» — что?",
+              options: ["Железная дорога", "Великий шёлковый путь", "Река Зарафшан"],
+              correct: 1, hint: "Древний торговый маршрут", hintUz: "Qadimiy savdo yo'li",
+              explanation: "«Через Бухару проходил Великий шёлковый путь.»",
+              funFact: "Шёлковый путь функционировал более 1500 лет." },
+            
+            { block: "C", type: "Текст", difficulty: "medium", city: "Бухара",
+              question: "По легенде, кто основал Бухару?",
+              options: ["Александр Македонский", "Царевич Сиявуш", "Амир Темур"],
+              correct: 1, hint: "Сын иранского царя", hintUz: "Eron shohining o'g'li",
+              explanation: "«По одной из легенд, царевич Сиявуш стал основателем этого города.»",
+              funFact: "Сиявуш — герой эпоса «Шахнаме» Фирдоуси." },
+            
+            { block: "C", type: "Текст", difficulty: "medium", city: "Бухара",
+              question: "Какая крепость является центром Бухары?",
+              options: ["Ичан-Кала", "Арк", "Ак-Сарай"],
+              correct: 1, hint: "Построена царевичем Сиявушем", hintUz: "Shahzoda Siyovush qurgan",
+              explanation: "«Крепость Арк, построенная царевичем Сиявушем, является центром Бухары.»",
+              funFact: "Арку более 2000 лет!" },
+            
+            { block: "C", type: "Текст", difficulty: "easy", city: "Бухара",
+              question: "Откуда прибывали купцы в караван-сараи Бухары?",
+              options: ["Только из Китая", "Из Индии, Китая, Ирана", "Только из Европы"],
+              correct: 1, hint: "Международная торговля", hintUz: "Xalqaro savdo",
+              explanation: "«Купцы, прибывшие из Индии, Китая, Ирана и других стран, размещались в караван-сараях.»",
+              funFact: "В Бухаре было более 60 караван-сараев." },
+            
+            { block: "C", type: "Текст", difficulty: "hard", city: "Бухара",
+              question: "Сколько медресе вмещал город Бухара?",
+              options: ["Более 50", "Более 100", "Более 200"],
+              correct: 2, hint: "Бухара — центр образования", hintUz: "Buxoro — ta'lim markazi",
+              explanation: "«Он вмещал в себя более 200 медресе.»",
+              funFact: "Бухару называли «Бухоро-и-Шариф» — Благородная Бухара." },
+            
+            { block: "C", type: "Текст", difficulty: "medium", city: "Бухара",
+              question: "Какие архитектурные ансамбли восхищают туристов в Бухаре?",
+              options: ["Регистан, Гур-Эмир", "Пои Калон, Ляби-хауз", "Ичан-Кала, Кальта-Минор"],
+              correct: 1, hint: "Упомянуты в тексте", hintUz: "Matnda aytilgan",
+              explanation: "«Пои Калон, Ляби-хауз своей красотой восхищают каждого приезжего.»",
+              funFact: "Минарет Калон (47 м) — символ Бухары." },
+            
+            { block: "C", type: "Текст", difficulty: "hard", city: "Бухара",
+              question: "В каком веке была построена городская стена Бухары (по тексту)?",
+              options: ["В XIV веке", "В XVI веке", "В XVIII веке"],
+              correct: 1, hint: "Город долго не выходил за её пределы", hintUz: "Shahar uzoq vaqt undan tashqariga chiqmagan",
+              explanation: "«Город долго не выходил за пределы своей городской стены, построенной в XVI веке.»",
+              funFact: "Стены Бухары имели 11 ворот." },
+
+            // БЛОК Г: Пословицы и практика (7 вопросов)
+            { block: "D", type: "Пословицы", difficulty: "easy", city: null,
+              question: "Восстановите пословицу: «Цыплят по осени ...»",
+              options: ["кормят", "считают", "продают"],
+              correct: 1, hint: "Итоги подводят в конце", hintUz: "Natijalar oxirida chiqariladi",
+              explanation: "«Цыплят по осени считают» — итоги подводят по результатам.",
+              funFact: "Эта пословица есть во многих языках мира." },
+            
+            { block: "D", type: "Пословицы", difficulty: "medium", city: null,
+              question: "«Соловья баснями не ...» — вставьте глагол:",
+              options: ["слушают", "кормят", "ловят"],
+              correct: 1, hint: "Красивые слова не заменят еду", hintUz: "Chiroyli so'zlar taomni almashtirmaydi",
+              explanation: "«Соловья баснями не кормят» — слова не заменят дела.",
+              funFact: "Из басни И.А. Крылова." },
+            
+            { block: "D", type: "Пословицы", difficulty: "medium", city: null,
+              question: "«Клин клином ...» — какой глагол?",
+              options: ["забивают", "вышибают", "держат"],
+              correct: 1, hint: "Подобное лечат подобным", hintUz: "O'xshashni o'xshash bilan davolaydilar",
+              explanation: "«Клин клином вышибают» — подобное устраняют подобным.",
+              funFact: "Латинский аналог: «Similia similibus curantur»." },
+            
+            { block: "D", type: "Практика", difficulty: "easy", city: "Самарканд",
+              question: "Составьте неопределённо-личное: «Туристы фотографируют площадь.»",
+              options: ["Площадь фотографируется.", "На площади фотографируют.", "Фотографирование площади."],
+              correct: 1, hint: "Уберите подлежащее, добавьте место", hintUz: "Egani olib tashlang, joy qo'shing",
+              explanation: "«На площади фотографируют» — глагол 3 л. мн.ч., нет подлежащего.",
+              funFact: "Регистан — самая фотографируемая площадь Узбекистана." },
+            
+            { block: "D", type: "Практика", difficulty: "hard", city: "Хива",
+              question: "Какое предложение является неопределённо-личным?",
+              options: ["Мастера создают керамику.", "Здесь создают керамику.", "Керамика создаётся мастерами."],
+              correct: 1, hint: "Нет подлежащего, глагол 3 л. мн.ч.", hintUz: "Ega yo'q, fe'l 3-shaxs ko'plik",
+              explanation: "«Здесь создают» — нет подлежащего, неопределённо-личное.",
+              funFact: "Хивинская керамика известна уникальным синим цветом." },
+            
+            { block: "D", type: "Практика", difficulty: "medium", city: "Ташкент",
+              question: "«В газетах ... о новых находках.» Вставьте глагол «писать»:",
+              options: ["пишет", "пишут", "написано"],
+              correct: 1, hint: "Неопр.-личн. = 3 л. мн.ч.", hintUz: "Shaxsi noaniq = 3-shaxs ko'plik",
+              explanation: "«Пишут» — 3 л. мн.ч. наст. вр., неопределённо-личное предложение.",
+              funFact: "Первая газета в Узбекистане вышла в 1870 году." },
+            
+            { block: "D", type: "Практика", difficulty: "hard", city: "Бухара",
+              question: "Найдите ошибку: «В древности здесь торговал шёлком.»",
+              options: ["Нет ошибки", "Нужно «торговали» (мн.ч.)", "Нужно «торгует»"],
+              correct: 1, hint: "Неопр.-личн. требует мн.ч.", hintUz: "Shaxsi noaniq ko'plik talab qiladi",
+              explanation: "«Торговали» — для неопределённо-личного нужно мн.ч.",
+              funFact: "Слово «шёлк» происходит от латинского «sericum»." }
+        ];
+
+        let currentQuestion = 0;
+        let correctAnswers = 0;
+        let incorrectAnswers = 0;
+        let selectedOption = null;
+        let answered = false;
+        let shuffledQuestions = [];
+        let currentShuffledOptions = [];
+        let answeredQuestions = [];
+        let blockStats = { A: { correct: 0, total: 0 }, B: { correct: 0, total: 0 }, C: { correct: 0, total: 0 }, D: { correct: 0, total: 0 } };
+
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            shuffledQuestions = shuffleArray(questions);
+            answeredQuestions = new Array(shuffledQuestions.length).fill(null);
+            countBlocks();
+            renderQuestionMap();
+            renderQuestion();
+        });
+
+        function countBlocks() {
+            shuffledQuestions.forEach(q => { blockStats[q.block].total++; });
+        }
+
+        function showSection(section, btn) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+            document.getElementById(section).classList.add('active');
+            if (btn) btn.classList.add('active');
+        }
+
+        function renderQuestionMap() {
+            const map = document.getElementById('questionMap');
+            map.innerHTML = shuffledQuestions.map((q, i) => {
+                let status = 'unanswered';
+                if (answeredQuestions[i] === true) status = 'correct';
+                else if (answeredQuestions[i] === false) status = 'incorrect';
+                if (i === currentQuestion) status = 'current';
+                return `<div class="map-dot ${status} block-${q.block.toLowerCase()}" onclick="goToQuestion(${i})">${i + 1}</div>`;
+            }).join('');
+        }
+
+        function goToQuestion(index) {
+            if (index < currentQuestion || answered) return;
+            currentQuestion = index;
+            renderQuestion();
+            renderQuestionMap();
+        }
+
+        function renderQuestion() {
+            if (currentQuestion >= shuffledQuestions.length) { showResults(); return; }
+
+            const q = shuffledQuestions[currentQuestion];
+            const card = document.getElementById('questionCard');
+            
+            const optionsWithIndex = q.options.map((opt, i) => ({ text: opt, originalIndex: i }));
+            currentShuffledOptions = shuffleArray(optionsWithIndex);
+            
+            const blockNames = { A: 'Блок А: Тип предложения', B: 'Блок Б: Форма глагола', C: 'Блок В: Текст', D: 'Блок Г: Практика' };
+            document.getElementById('blockName').textContent = blockNames[q.block];
+            
+            const diffClass = q.difficulty === 'easy' ? 'difficulty-easy' : q.difficulty === 'medium' ? 'difficulty-medium' : 'difficulty-hard';
+            const diffText = q.difficulty === 'easy' ? '★ Легко' : q.difficulty === 'medium' ? '★★ Средне' : '★★★ Сложно';
+            
+            const contextHtml = q.city ? `<div class="question-context"><span class="city-tag">🏛️ ${q.city}</span> Контекст: Великий шёлковый путь</div>` : '';
+            
+            card.innerHTML = `
+                <div class="question-header">
+                    <span class="question-number">Вопрос ${currentQuestion + 1}</span>
+                    <span class="difficulty-badge ${diffClass}">${diffText}</span>
+                    <span class="question-type block-${q.block.toLowerCase()}">${q.type}</span>
+                </div>
+                ${contextHtml}
+                <div class="question-text">${q.question}</div>
+                <div class="options-container">
+                    ${currentShuffledOptions.map((opt, i) => `
+                        <div class="option" onclick="selectOption(${i})" data-index="${i}">
+                            <span class="option-marker">${String.fromCharCode(65 + i)}</span>
+                            <span class="option-text">${opt.text}</span>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="hint-container">
+                    <button class="hint-btn" onclick="showHint()">
+                        <span class="lamp">💡</span> Подсказка
+                    </button>
+                    <div class="hint-box" id="hintBox">
+                        <div class="hint-label">💡 Подсказка:</div>
+                        <div class="hint-text">${q.hint}</div>
+                        <div class="hint-text-uz">${q.hintUz}</div>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback"></div>
+                <div class="btn-container">
+                    <button class="btn btn-primary" id="checkBtn" onclick="checkAnswer()" disabled>Проверить</button>
+                    <button class="btn btn-next" id="nextBtn" onclick="nextQuestion()" style="display:none;">Дальше →</button>
+                </div>
+            `;
+
+            selectedOption = null;
+            answered = false;
+            updateProgress();
+            renderQuestionMap();
+        }
+
+        function selectOption(index) {
+            if (answered) return;
+            document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+            document.querySelector(`.option[data-index="${index}"]`).classList.add('selected');
+            selectedOption = index;
+            document.getElementById('checkBtn').disabled = false;
+        }
+
+        function showHint() { document.getElementById('hintBox').classList.toggle('show'); }
+
+        function checkAnswer() {
+            if (selectedOption === null || answered) return;
+            
+            answered = true;
+            const q = shuffledQuestions[currentQuestion];
+            const options = document.querySelectorAll('.option');
+            const feedback = document.getElementById('feedback');
+            
+            const selectedOriginalIndex = currentShuffledOptions[selectedOption].originalIndex;
+            options.forEach(opt => opt.classList.add('disabled'));
+            
+            const correctShuffledIndex = currentShuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+            
+            const funFactHtml = q.funFact ? `<div class="feedback-fun-fact"><strong>🐪 Интересный факт:</strong> ${q.funFact}</div>` : '';
+            
+            if (selectedOriginalIndex === q.correct) {
+                correctAnswers++;
+                blockStats[q.block].correct++;
+                answeredQuestions[currentQuestion] = true;
+                options[selectedOption].classList.add('correct');
+                feedback.className = 'feedback show correct';
+                feedback.innerHTML = `<div class="feedback-title">✅ Правильно!</div><div class="feedback-text">${q.explanation}</div>${funFactHtml}`;
+            } else {
+                incorrectAnswers++;
+                answeredQuestions[currentQuestion] = false;
+                options[selectedOption].classList.add('incorrect');
+                options[correctShuffledIndex].classList.add('correct');
+                feedback.className = 'feedback show incorrect';
+                feedback.innerHTML = `<div class="feedback-title">❌ Неправильно</div><div class="feedback-text">Правильный ответ: <strong>${q.options[q.correct]}</strong></div><div class="feedback-explanation">${q.explanation}</div>${funFactHtml}`;
+            }
+            
+            document.getElementById('checkBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'inline-flex';
+            document.getElementById('correctCount').textContent = correctAnswers;
+            document.getElementById('incorrectCount').textContent = incorrectAnswers;
+            renderQuestionMap();
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion >= shuffledQuestions.length) { showResults(); } 
+            else { renderQuestion(); }
+        }
+
+        function updateProgress() {
+            document.getElementById('currentQ').textContent = currentQuestion + 1;
+            document.getElementById('totalQ').textContent = shuffledQuestions.length;
+            
+            const percent = Math.round((currentQuestion / shuffledQuestions.length) * 100);
+            document.getElementById('progressPercent').textContent = percent + '%';
+            
+            const circle = document.getElementById('progressCircle');
+            const circumference = 2 * Math.PI * 32;
+            const offset = circumference - (percent / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+        }
+
+        function showResults() {
+            document.getElementById('resultsTab').style.display = 'inline-flex';
+            showSection('results', document.getElementById('resultsTab'));
+            
+            const score = correctAnswers;
+            const total = shuffledQuestions.length;
+            const percent = Math.round((score / total) * 100);
+            
+            document.getElementById('resultsScore').textContent = `${score}/${total}`;
+            document.getElementById('statA').textContent = `${blockStats.A.correct}/${blockStats.A.total}`;
+            document.getElementById('statB').textContent = `${blockStats.B.correct}/${blockStats.B.total}`;
+            document.getElementById('statC').textContent = `${blockStats.C.correct}/${blockStats.C.total}`;
+            document.getElementById('statD').textContent = `${blockStats.D.correct}/${blockStats.D.total}`;
+            
+            let icon, title, achievement, recommendation;
+            if (percent >= 90) {
+                icon = '🏆'; title = 'Превосходно!'; achievement = '🐪 Мастер Шёлкового пути';
+                recommendation = 'Вы отлично освоили неопределённо-личные предложения! Переходите к безличным.';
+            } else if (percent >= 75) {
+                icon = '🎉'; title = 'Отлично!'; achievement = '🏛️ Знаток древних городов';
+                recommendation = 'Хороший результат! Повторите формы глаголов в неопределённо-личных предложениях.';
+            } else if (percent >= 60) {
+                icon = '📚'; title = 'Хорошо!'; achievement = '🧭 Путешественник';
+                recommendation = 'Уделите внимание отличиям неопределённо-личных от безличных предложений.';
+            } else if (percent >= 40) {
+                icon = '🌱'; title = 'Неплохо!'; achievement = '📜 Ученик караван-сарая';
+                const weakBlock = Object.entries(blockStats).sort((a, b) => (a[1].correct/a[1].total) - (b[1].correct/b[1].total))[0][0];
+                const blockNames = { A: 'определению типа', B: 'формам глагола', C: 'тексту', D: 'практике' };
+                recommendation = `Обратите внимание на ${blockNames[weakBlock]}. Перечитайте правила.`;
+            } else {
+                icon = '💪'; title = 'Нужно повторить'; achievement = '🌅 Начало пути';
+                recommendation = 'Внимательно изучите правила неопределённо-личных предложений и попробуйте снова.';
+            }
+            
+            document.getElementById('resultsIcon').textContent = icon;
+            document.getElementById('resultsTitle').textContent = title;
+            document.getElementById('resultsAchievement').textContent = achievement;
+            document.getElementById('recommendationText').textContent = recommendation;
+        }
+
+        function restartTest() {
+            currentQuestion = 0;
+            correctAnswers = 0;
+            incorrectAnswers = 0;
+            blockStats = { A: { correct: 0, total: 0 }, B: { correct: 0, total: 0 }, C: { correct: 0, total: 0 }, D: { correct: 0, total: 0 } };
+            document.getElementById('correctCount').textContent = 0;
+            document.getElementById('incorrectCount').textContent = 0;
+            document.getElementById('resultsTab').style.display = 'none';
+            shuffledQuestions = shuffleArray(questions);
+            answeredQuestions = new Array(shuffledQuestions.length).fill(null);
+            countBlocks();
+            showSection('test', document.querySelector('.tab-btn:nth-child(2)'));
+            renderQuestionMap();
+            renderQuestion();
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's')) { e.preventDefault(); }
+        });
+    </script>
+</body>
+</html>
