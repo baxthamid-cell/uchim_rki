@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О спорт, ты — мир! | Р.п. с предлогами ДО, ПОСЛЕ, ВО ВРЕМЯ | 6 класс А2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Фирменный1: Тёмная шапка */
+            --header-dark: linear-gradient(135deg, #1a237e 0%, #0d1b4a 50%, #0a1635 100%);
+            --header-accent: #64b5f6;
+            
+            /* Лазурные дымчатые рамки */
+            --azure-glow: rgba(100, 181, 246, 0.3);
+            --azure-border: rgba(100, 181, 246, 0.5);
+            --azure-light: rgba(100, 181, 246, 0.15);
+            
+            /* Красные окончания */
+            --ending-color: #e53935;
+            --ending-bg: rgba(229, 57, 53, 0.12);
+            
+            /* Олимпийские цвета */
+            --olympic-blue: #0081C8;
+            --olympic-yellow: #FCB131;
+            --olympic-black: #000000;
+            --olympic-green: #00A651;
+            --olympic-red: #EE334E;
+            
+            /* Основные цвета */
+            --bg-main: #f0f4f8;
+            --bg-card: #ffffff;
+            --text-dark: #1a237e;
+            --text-medium: #37474f;
+            --text-light: #607d8b;
+            
+            /* Обратная связь */
+            --correct: #2e7d32;
+            --correct-bg: rgba(46, 125, 50, 0.12);
+            --incorrect: #c62828;
+            --incorrect-bg: rgba(198, 40, 40, 0.12);
+            
+            /* Тени и радиусы */
+            --shadow-sm: 0 2px 8px rgba(26, 35, 126, 0.08);
+            --shadow-md: 0 4px 20px rgba(26, 35, 126, 0.12);
+            --shadow-lg: 0 8px 40px rgba(26, 35, 126, 0.16);
+            --radius: 20px;
+            --radius-sm: 12px;
+            
+            /* УВЕЛИЧЕННЫЕ ШРИФТЫ ДЛЯ ДОСКИ */
+            --font-base: 1.4rem;
+            --font-lg: 1.7rem;
+            --font-xl: 2.2rem;
+            --font-xxl: 2.8rem;
+            --font-title: 3.2rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg-main);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: var(--font-base);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        /* === HEADER === */
+        .header {
+            background: var(--header-dark);
+            border-radius: var(--radius);
+            padding: 50px 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at top right, rgba(100, 181, 246, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .header-badge {
+            display: inline-block;
+            background: rgba(100, 181, 246, 0.2);
+            border: 2px solid rgba(100, 181, 246, 0.4);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: var(--font-lg);
+            font-weight: 800;
+            color: var(--header-accent);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Олимпийские кольца */
+        .olympic-rings {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ring {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 5px solid;
+            background: transparent;
+        }
+
+        .ring.blue { border-color: var(--olympic-blue); }
+        .ring.yellow { border-color: var(--olympic-yellow); margin-top: 20px; }
+        .ring.black { border-color: #fff; }
+        .ring.green { border-color: var(--olympic-green); margin-top: 20px; }
+        .ring.red { border-color: var(--olympic-red); }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--font-title);
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 12px;
+        }
+
+        .header .subtitle {
+            color: var(--header-accent);
+            font-size: var(--font-xl);
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle-uz {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: var(--font-lg);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .header .motto {
+            color: var(--olympic-yellow);
+            font-size: var(--font-lg);
+            font-weight: 800;
+            margin-top: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* === ВКЛАДКИ === */
+        .tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            padding: 18px 35px;
+            border: 3px solid var(--azure-border);
+            background: var(--bg-card);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-size: var(--font-lg);
+            font-weight: 800;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm), 0 0 20px var(--azure-glow);
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md), 0 0 30px var(--azure-glow);
+        }
+
+        .tab-btn.active {
+            background: var(--header-dark);
+            color: #ffffff;
+            border-color: transparent;
+        }
+
+        /* === СЕКЦИИ === */
+        .section {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* === КАРТОЧКА === */
+        .grammar-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow-md), 0 0 25px var(--azure-glow);
+            border: 2px solid var(--azure-border);
+            margin-bottom: 30px;
+        }
+
+        .grammar-title {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--font-xxl);
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--azure-light);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .grammar-title .icon {
+            font-size: var(--font-xxl);
+        }
+
+        .grammar-title .uz {
+            font-size: var(--font-lg);
+            color: var(--text-light);
+            font-style: italic;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+        }
+
+        /* === ПРАВИЛА === */
+        .rule-box {
+            background: var(--azure-light);
+            border-left: 6px solid var(--header-accent);
+            padding: 25px 30px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin-bottom: 25px;
+        }
+
+        .rule-title {
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: var(--font-xl);
+        }
+
+        .rule-content {
+            color: var(--text-medium);
+            font-size: var(--font-lg);
+            line-height: 1.9;
+        }
+
+        .rule-content-uz {
+            color: var(--text-light);
+            font-size: var(--font-base);
+            font-style: italic;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 2px dashed var(--azure-border);
+        }
+
+        /* === ПРЕДЛОГИ (красные) === */
+        .predlog {
+            color: var(--ending-color);
+            font-weight: 900;
+            background: var(--ending-bg);
+            padding: 4px 12px;
+            border-radius: 6px;
+            border: 2px solid rgba(229, 57, 53, 0.3);
+        }
+
+        /* === ОКОНЧАНИЯ === */
+        .ending {
+            color: var(--ending-color);
+            font-weight: 800;
+        }
+
+        /* === ТАБЛИЦА === */
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: var(--font-base);
+        }
+
+        .grammar-table th,
+        .grammar-table td {
+            padding: 18px 22px;
+            text-align: left;
+            border: 2px solid var(--azure-border);
+        }
+
+        .grammar-table th {
+            background: var(--header-dark);
+            color: #ffffff;
+            font-weight: 800;
+            font-size: var(--font-lg);
+        }
+
+        .grammar-table tr:nth-child(even) {
+            background: var(--azure-light);
+        }
+
+        .grammar-table tr:hover {
+            background: rgba(100, 181, 246, 0.25);
+        }
+
+        /* === ПРИМЕРЫ === */
+        .example-box {
+            background: #fafafa;
+            padding: 25px;
+            border-radius: var(--radius-sm);
+            margin-top: 20px;
+            border: 2px dashed var(--azure-border);
+        }
+
+        .example-title {
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: var(--font-lg);
+        }
+
+        .example-item {
+            padding: 15px 0;
+            border-bottom: 2px dotted var(--azure-border);
+            font-size: var(--font-lg);
+            line-height: 1.8;
+        }
+
+        .example-item:last-child {
+            border-bottom: none;
+        }
+
+        .example-uz {
+            color: var(--text-light);
+            font-style: italic;
+            display: block;
+            margin-top: 8px;
+            font-size: var(--font-base);
+        }
+
+        /* === ПРОГРЕСС === */
+        .progress-container {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-sm);
+            border: 2px solid var(--azure-border);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .progress-text {
+            font-weight: 800;
+            color: var(--text-dark);
+            font-size: var(--font-lg);
+        }
+
+        .progress-score {
+            display: flex;
+            gap: 25px;
+        }
+
+        .score-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 800;
+            font-size: var(--font-lg);
+        }
+
+        .score-correct { color: var(--correct); }
+        .score-incorrect { color: var(--incorrect); }
+
+        .progress-bar {
+            height: 14px;
+            background: #e0e0e0;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #1a237e 0%, #64b5f6 100%);
+            border-radius: 7px;
+            transition: width 0.5s ease;
+        }
+
+        /* === КАРТОЧКА ВОПРОСА === */
+        .question-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow-lg), 0 0 30px var(--azure-glow);
+            border: 2px solid var(--azure-border);
+            margin-bottom: 25px;
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .question-number {
+            background: var(--header-dark);
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 900;
+            font-size: var(--font-lg);
+        }
+
+        .question-type {
+            background: var(--azure-light);
+            color: var(--text-medium);
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: var(--font-base);
+            font-weight: 700;
+        }
+
+        .question-text {
+            font-size: var(--font-xl);
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            font-weight: 600;
+        }
+
+        .question-text .highlight {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 6px 15px;
+            border-radius: 8px;
+            border: 2px solid #ffb74d;
+        }
+
+        /* === ПРЕДЛОЖЕНИЕ С ПРОПУСКОМ === */
+        .sentence-box {
+            background: var(--azure-light);
+            padding: 25px 30px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 25px;
+            font-size: var(--font-xl);
+            line-height: 2;
+            border: 2px solid var(--azure-border);
+        }
+
+        .blank {
+            display: inline-block;
+            min-width: 200px;
+            border-bottom: 4px solid var(--ending-color);
+            margin: 0 10px;
+            text-align: center;
+            color: var(--ending-color);
+            font-weight: 800;
+        }
+
+        /* === ВАРИАНТЫ ОТВЕТОВ === */
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 20px 25px;
+            background: var(--bg-card);
+            border: 3px solid var(--azure-border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px var(--azure-glow);
+        }
+
+        .option:hover {
+            transform: translateX(10px);
+            border-color: var(--header-accent);
+            box-shadow: 0 0 30px var(--azure-glow);
+        }
+
+        .option.selected {
+            border-color: var(--text-dark);
+            background: var(--azure-light);
+        }
+
+        .option.correct {
+            border-color: var(--correct);
+            background: var(--correct-bg);
+        }
+
+        .option.incorrect {
+            border-color: var(--incorrect);
+            background: var(--incorrect-bg);
+        }
+
+        .option.disabled {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .option-marker {
+            width: 50px;
+            height: 50px;
+            background: var(--azure-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-right: 20px;
+            flex-shrink: 0;
+            border: 3px solid var(--azure-border);
+            font-size: var(--font-lg);
+        }
+
+        .option.selected .option-marker {
+            background: var(--text-dark);
+            color: #ffffff;
+        }
+
+        .option.correct .option-marker {
+            background: var(--correct);
+            color: #ffffff;
+            border-color: var(--correct);
+        }
+
+        .option.incorrect .option-marker {
+            background: var(--incorrect);
+            color: #ffffff;
+            border-color: var(--incorrect);
+        }
+
+        .option-text {
+            font-size: var(--font-lg);
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* === ПОДСКАЗКА === */
+        .hint-container {
+            margin: 25px 0;
+        }
+
+        .hint-btn {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border: 3px solid #ffc107;
+            padding: 15px 25px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-size: var(--font-lg);
+            font-weight: 800;
+            color: #f57f17;
+            transition: all 0.3s ease;
+        }
+
+        .hint-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+        }
+
+        .hint-box {
+            display: none;
+            background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+            border: 3px solid #ffc107;
+            border-radius: var(--radius-sm);
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .hint-box.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .hint-label {
+            font-weight: 900;
+            color: #f57f17;
+            margin-bottom: 10px;
+            font-size: var(--font-lg);
+        }
+
+        .hint-text {
+            color: var(--text-medium);
+            font-size: var(--font-lg);
+            line-height: 1.7;
+        }
+
+        .hint-text-uz {
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 2px dashed #ffc107;
+            font-size: var(--font-base);
+        }
+
+        /* === ОБРАТНАЯ СВЯЗЬ === */
+        .feedback {
+            display: none;
+            padding: 25px;
+            border-radius: var(--radius-sm);
+            margin: 25px 0;
+        }
+
+        .feedback.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .feedback.correct {
+            background: var(--correct-bg);
+            border: 3px solid var(--correct);
+        }
+
+        .feedback.incorrect {
+            background: var(--incorrect-bg);
+            border: 3px solid var(--incorrect);
+        }
+
+        .feedback-title {
+            font-weight: 900;
+            font-size: var(--font-xl);
+            margin-bottom: 10px;
+        }
+
+        .feedback.correct .feedback-title { color: var(--correct); }
+        .feedback.incorrect .feedback-title { color: var(--incorrect); }
+
+        .feedback-text {
+            color: var(--text-medium);
+            font-size: var(--font-lg);
+        }
+
+        /* === КНОПКИ === */
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-size: var(--font-lg);
+            font-weight: 800;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--header-dark);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-next {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: #ffffff;
+            padding-right: 50px;
+            position: relative;
+            clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 50%, calc(100% - 25px) 100%, 0 100%);
+        }
+
+        .btn-next:hover {
+            transform: translateX(8px);
+        }
+
+        .btn-restart {
+            background: linear-gradient(135deg, #64b5f6 0%, #1976d2 100%);
+            color: #ffffff;
+        }
+
+        /* === РЕЗУЛЬТАТЫ === */
+        .results-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 50px;
+            text-align: center;
+            box-shadow: var(--shadow-lg), 0 0 40px var(--azure-glow);
+            border: 2px solid var(--azure-border);
+        }
+
+        .results-icon {
+            font-size: 6rem;
+            margin-bottom: 25px;
+        }
+
+        .results-score {
+            font-size: 4.5rem;
+            font-weight: 900;
+            background: var(--header-dark);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .results-title {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--font-xxl);
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .results-text {
+            color: var(--text-medium);
+            font-size: var(--font-xl);
+            margin-bottom: 10px;
+        }
+
+        .results-text-uz {
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: var(--font-lg);
+        }
+
+        /* === АВТОР === */
+        .author-info {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 2px solid var(--azure-border);
+            text-align: center;
+            font-size: var(--font-base);
+            color: var(--text-light);
+        }
+
+        .author-info-name {
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        /* === ФУТЕР === */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-light);
+            font-size: var(--font-base);
+        }
+
+        .footer-brand {
+            font-weight: 800;
+            color: var(--text-dark);
+            font-size: var(--font-lg);
+            margin-bottom: 8px;
+        }
+
+        .footer-code {
+            display: inline-block;
+            background: var(--header-dark);
+            color: #ffffff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: var(--font-base);
+            margin-top: 12px;
+        }
+
+        /* === АДАПТИВНОСТЬ === */
+        @media (max-width: 900px) {
+            :root {
+                --font-base: 1.2rem;
+                --font-lg: 1.4rem;
+                --font-xl: 1.8rem;
+                --font-xxl: 2.2rem;
+                --font-title: 2.5rem;
+            }
+            .container { padding: 20px; }
+            .header { padding: 35px 25px; }
+            .grammar-card, .question-card { padding: 25px; }
+        }
+
+        /* === ЗАЩИТА === */
+        body {
+            -webkit-touch-callout: none;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;">
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-badge">6 класс • Уровень А2</div>
+            <div class="olympic-rings">
+                <div class="ring blue"></div>
+                <div class="ring black"></div>
+                <div class="ring red"></div>
+            </div>
+            <div class="olympic-rings" style="margin-top: -30px; padding-left: 25px;">
+                <div class="ring yellow"></div>
+                <div class="ring green"></div>
+            </div>
+            <h1>О спорт, ты — мир!</h1>
+            <div class="subtitle">Родительный падеж с предлогами ДО, ПОСЛЕ, ВО ВРЕМЯ, НАКАНУНЕ</div>
+            <div class="subtitle-uz">Qaratqich kelishigi predloglari bilan • DO, POSLE, VO VREMYA, NAKANUNE</div>
+            <div class="motto">«Быстрее, выше, сильнее!»</div>
+        </header>
+
+        <!-- ВКЛАДКИ -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showSection('grammar', this)">📖 Правила</button>
+            <button class="tab-btn" onclick="showSection('test', this)">✏️ Тест (25)</button>
+            <button class="tab-btn" onclick="showSection('results', this)" id="resultsTab" style="display:none;">📊 Результаты</button>
+        </div>
+
+        <!-- ===== РАЗДЕЛ: ПРАВИЛА ===== -->
+        <section id="grammar" class="section active">
+            <div class="grammar-card">
+                <h2 class="grammar-title">
+                    <span class="icon">🏅</span> 
+                    Родительный падеж с предлогами времени
+                    <span class="uz">(Vaqt predloglari bilan qaratqich kelishigi)</span>
+                </h2>
+                
+                <!-- Определение -->
+                <div class="rule-box">
+                    <div class="rule-title">📌 Когда используем? (Qachon ishlatamiz?)</div>
+                    <div class="rule-content">
+                        Чтобы сказать <strong>о времени действия или события</strong>, нужны существительные в <strong>родительном падеже</strong> с предлогами <span class="predlog">ДО</span>, <span class="predlog">ПОСЛЕ</span>, <span class="predlog">ВО ВРЕМЯ</span>, <span class="predlog">НАКАНУНЕ</span>.
+                    </div>
+                    <div class="rule-content-uz">
+                        <strong>Harakat yoki voqea vaqtini</strong> aytish uchun ot so'zlar <strong>qaratqich kelishigida</strong> predloglar bilan ishlatiladi.
+                    </div>
+                </div>
+
+                <!-- Таблица предлогов -->
+                <table class="grammar-table">
+                    <tr>
+                        <th>Предлог</th>
+                        <th>Значение</th>
+                        <th>O'zbekcha</th>
+                        <th>Пример</th>
+                    </tr>
+                    <tr>
+                        <td><span class="predlog">ДО</span></td>
+                        <td>перед чем-то</td>
+                        <td>...gacha, ...dan oldin</td>
+                        <td><span class="predlog">до</span> начал<span class="ending">а</span> соревнований</td>
+                    </tr>
+                    <tr>
+                        <td><span class="predlog">ПОСЛЕ</span></td>
+                        <td>когда закончилось</td>
+                        <td>...dan keyin, ...dan so'ng</td>
+                        <td><span class="predlog">после</span> оконча́ни<span class="ending">я</span> матча</td>
+                    </tr>
+                    <tr>
+                        <td><span class="predlog">ВО ВРЕМЯ</span></td>
+                        <td>в процессе</td>
+                        <td>...paytida, ...vaqtida</td>
+                        <td><span class="predlog">во время</span> игр<span class="ending">ы</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="predlog">НАКАНУНЕ</span></td>
+                        <td>за день до</td>
+                        <td>arafasida</td>
+                        <td><span class="predlog">накануне</span> праздник<span class="ending">а</span></td>
+                    </tr>
+                </table>
+
+                <!-- Окончания Р.п. -->
+                <div class="rule-box">
+                    <div class="rule-title">📌 Окончания родительного падежа (Qaratqich kelishigi qo'shimchalari)</div>
+                    <div class="rule-content">
+                        <strong>Мужской род:</strong> -<span class="ending">А</span> / -<span class="ending">Я</span> (урок → урок<span class="ending">а</span>, музей → музе<span class="ending">я</span>)<br>
+                        <strong>Женский род:</strong> -<span class="ending">Ы</span> / -<span class="ending">И</span> (игра → игр<span class="ending">ы</span>, лекция → лекци<span class="ending">и</span>)<br>
+                        <strong>Средний род:</strong> -<span class="ending">А</span> / -<span class="ending">Я</span> (начало → начал<span class="ending">а</span>, занятие → заняти<span class="ending">я</span>)
+                    </div>
+                </div>
+
+                <!-- Примеры из текста -->
+                <div class="example-box">
+                    <div class="example-title">🏆 Примеры из текста об Олимпийских играх:</div>
+                    <div class="example-item">
+                        <span class="predlog">Во время</span> Олимпиад<span class="ending">ы</span> прекращались войны.
+                        <span class="example-uz">Olimpiada paytida urushlar to'xtatilardi.</span>
+                    </div>
+                    <div class="example-item">
+                        <span class="predlog">До</span> начал<span class="ending">а</span> соревнований зажигают олимпийский огонь.
+                        <span class="example-uz">Musobaqalar boshlanishidan oldin olimpiya olovini yoqishadi.</span>
+                    </div>
+                    <div class="example-item">
+                        <span class="predlog">После</span> окончани<span class="ending">я</span> спортивных мероприятий огонь гасят.
+                        <span class="example-uz">Sport tadbirlari tugaganidan keyin olovni o'chirishadi.</span>
+                    </div>
+                </div>
+
+                <!-- Интересные факты -->
+                <div class="rule-box">
+                    <div class="rule-title">🎯 Это интересно!</div>
+                    <div class="rule-content">
+                        <strong>Олимпийские кольца:</strong><br>
+                        🔵 Синее — Европа<br>
+                        ⚫ Чёрное — Африка<br>
+                        🔴 Красное — Америка<br>
+                        🟡 Жёлтое — Азия<br>
+                        🟢 Зелёное — Австралия
+                    </div>
+                    <div class="rule-content-uz">
+                        Olimpiya halqalari — barcha mamlakatlar va xalqlarning birlashish ramzi!
+                    </div>
+                </div>
+
+                <div class="author-info">
+                    <span class="author-info-name">Бахтияр Хамидов</span><br>
+                    учитель РКИ, школа № 33<br>
+                    Гулистанский район, Сырдарьинская область
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== РАЗДЕЛ: ТЕСТ ===== -->
+        <section id="test" class="section">
+            <div class="progress-container">
+                <div class="progress-header">
+                    <span class="progress-text">Вопрос <span id="currentQ">1</span> из <span id="totalQ">25</span></span>
+                    <div class="progress-score">
+                        <span class="score-item score-correct">✓ <span id="correctCount">0</span></span>
+                        <span class="score-item score-incorrect">✗ <span id="incorrectCount">0</span></span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="question-card" id="questionCard">
+                <!-- Вопросы загружаются через JavaScript -->
+            </div>
+        </section>
+
+        <!-- ===== РАЗДЕЛ: РЕЗУЛЬТАТЫ ===== -->
+        <section id="results" class="section">
+            <div class="results-card">
+                <div class="results-icon" id="resultsIcon">🏆</div>
+                <div class="results-score" id="resultsScore">0/25</div>
+                <h2 class="results-title" id="resultsTitle">Результат</h2>
+                <p class="results-text" id="resultsText">Продолжайте учиться!</p>
+                <p class="results-text-uz" id="resultsTextUz">O'rganishni davom eting!</p>
+                <div class="btn-container">
+                    <button class="btn btn-restart" onclick="restartTest()">🔄 Начать заново</button>
+                    <button class="btn btn-primary" onclick="showSection('grammar', document.querySelector('.tab-btn'))">📖 К правилам</button>
+                </div>
+                <div class="author-info">
+                    <span class="author-info-name">Бахтияр Хамидов</span><br>
+                    учитель РКИ, школа № 33
+                </div>
+            </div>
+        </section>
+
+        <!-- ФУТЕР -->
+        <footer class="footer">
+            <div class="footer-brand">🏅 Олимпийские игры • Родительный падеж с предлогами</div>
+            <div>© 2025 Бахтияр Хамидов | Telegram: @rki_uz_bot</div>
+            <div class="footer-code">rki33</div>
+        </footer>
+    </div>
+
+    <script>
+        // ===== ВОПРОСЫ: 25 заданий =====
+        const questions = [
+            // БЛОК А: Выбор предлога (10 вопросов)
+            {
+                type: "Выбор предлога",
+                question: "Выберите правильный предлог: «_____ урока нужно приготовить тетрадь.»",
+                options: ["до", "после", "во время"],
+                correct: 0,
+                hint: "Действие ПЕРЕД уроком → ДО",
+                hintUz: "Darsdan OLDIN → DO"
+            },
+            {
+                type: "Выбор предлога",
+                question: "Выберите правильный предлог: «_____ соревнований спортсмены получили медали.»",
+                options: ["до", "после", "накануне"],
+                correct: 1,
+                hint: "Медали дают КОГДА ЗАКОНЧИЛИСЬ соревнования → ПОСЛЕ",
+                hintUz: "Musobaqalar TUGAGANdan keyin → POSLE"
+            },
+            {
+                type: "Выбор предлога",
+                question: "Выберите правильный предлог: «_____ матча болельщики поддерживают команду.»",
+                options: ["до", "после", "во время"],
+                correct: 2,
+                hint: "В ПРОЦЕССЕ матча → ВО ВРЕМЯ",
+                hintUz: "O'yin PAYTIDA → VO VREMYA"
+            },
+            {
+                type: "Выбор предлога",
+                question: "Выберите правильный предлог: «_____ праздника все готовят подарки.»",
+                options: ["после", "во время", "накануне"],
+                correct: 2,
+                hint: "ЗА ДЕНЬ ДО праздника → НАКАНУНЕ",
+                hintUz: "Bayramdan BIR KUN OLDIN → NAKANUNE"
+            },
+            {
+                type: "Выбор предлога",
+                question: "Выберите правильный предлог: «_____ Олимпиады прекращались войны.»",
+                options: ["до", "во время", "после"],
+                correct: 1,
+                hint: "В ПРОЦЕССЕ Олимпиады → ВО ВРЕМЯ",
+                hintUz: "Olimpiada DAVOMIDA → VO VREMYA"
+            },
+            {
+                type: "Выбор предлога",
+                question: "Выберите правильный предлог: «Спортсмены тренируются _____ соревнований.»",
+                options: ["до", "после", "накануне"],
+                correct: 0,
+                hint: "Тренировки ПЕРЕД соревнованиями → ДО",
+                hintUz: "Musobaqalardan OLDIN mashq → DO"
+            },
+            {
+                type: "Выбор предлога",
+                question: "Выберите правильный предлог: «_____ спектакля нельзя шуметь.»",
+                options: ["до", "во время", "после"],
+                correct: 1,
+                hint: "В ПРОЦЕССЕ спектакля → ВО ВРЕМЯ",
+                hintUz: "Spektakl PAYTIDA → VO VREMYA"
+            },
+            {
+                type: "Выбор предлога",
+                question: "Выберите правильный предлог: «_____ каникул дети поехали на экскурсию.»",
+                options: ["до", "после", "во время"],
+                correct: 1,
+                hint: "КОГДА ЗАКОНЧИЛИСЬ каникулы → ПОСЛЕ",
+                hintUz: "Ta'til TUGAGANdan keyin → POSLE"
+            },
+            {
+                type: "Выбор предлога",
+                question: "Выберите правильный предлог: «_____ экзамена студенты учат материал.»",
+                options: ["после", "накануне", "во время"],
+                correct: 1,
+                hint: "ЗА ДЕНЬ ДО экзамена → НАКАНУНЕ",
+                hintUz: "Imtihondan BIR KUN OLDIN → NAKANUNE"
+            },
+            {
+                type: "Выбор предлога",
+                question: "Выберите правильный предлог: «Зажигают огонь _____ начала соревнований.»",
+                options: ["до", "после", "во время"],
+                correct: 0,
+                hint: "ПЕРЕД началом → ДО",
+                hintUz: "Boshlanishidan OLDIN → DO"
+            },
+
+            // БЛОК Б: Выбор формы слова (8 вопросов)
+            {
+                type: "Форма слова (Р.п.)",
+                question: "Выберите правильную форму: «до _____ (тренировка)»",
+                options: ["тренировка", "тренировки", "тренировку"],
+                correct: 1,
+                hint: "Ж.р. → -Ы/-И: тренировка → тренировкИ",
+                hintUz: "Ayol jinsi → -Ы/-И"
+            },
+            {
+                type: "Форма слова (Р.п.)",
+                question: "Выберите правильную форму: «после _____ (матч)»",
+                options: ["матч", "матча", "матчу"],
+                correct: 1,
+                hint: "М.р. → -А/-Я: матч → матчА",
+                hintUz: "Erkak jinsi → -А/-Я"
+            },
+            {
+                type: "Форма слова (Р.п.)",
+                question: "Выберите правильную форму: «во время _____ (игра)»",
+                options: ["игра", "игры", "игру"],
+                correct: 1,
+                hint: "Ж.р. → -Ы/-И: игра → игрЫ",
+                hintUz: "Ayol jinsi → -Ы/-И"
+            },
+            {
+                type: "Форма слова (Р.п.)",
+                question: "Выберите правильную форму: «накануне _____ (праздник)»",
+                options: ["праздник", "праздника", "празднику"],
+                correct: 1,
+                hint: "М.р. → -А/-Я: праздник → праздникА",
+                hintUz: "Erkak jinsi → -А/-Я"
+            },
+            {
+                type: "Форма слова (Р.п.)",
+                question: "Выберите правильную форму: «до _____ (урок)»",
+                options: ["урок", "урока", "уроку"],
+                correct: 1,
+                hint: "М.р. → -А/-Я: урок → урокА",
+                hintUz: "Erkak jinsi → -А/-Я"
+            },
+            {
+                type: "Форма слова (Р.п.)",
+                question: "Выберите правильную форму: «после _____ (лекция)»",
+                options: ["лекция", "лекции", "лекцию"],
+                correct: 1,
+                hint: "Ж.р. на -ИЯ → -И: лекция → лекциИ",
+                hintUz: "-ИЯ tugaydigan → -И"
+            },
+            {
+                type: "Форма слова (Р.п.)",
+                question: "Выберите правильную форму: «во время _____ (занятие)»",
+                options: ["занятие", "занятия", "занятию"],
+                correct: 1,
+                hint: "Ср.р. на -ИЕ → -Я: занятие → занятиЯ",
+                hintUz: "O'rta jins -ИЕ → -Я"
+            },
+            {
+                type: "Форма слова (Р.п.)",
+                question: "Выберите правильную форму: «до _____ (обед)»",
+                options: ["обед", "обеда", "обеду"],
+                correct: 1,
+                hint: "М.р. → -А/-Я: обед → обедА",
+                hintUz: "Erkak jinsi → -А/-Я"
+            },
+
+            // БЛОК В: Вопросы по тексту об Олимпиаде (7 вопросов)
+            {
+                type: "Текст об Олимпиаде",
+                question: "Где зародились Олимпийские игры?",
+                options: ["В Афинах", "В Олимпии", "В Риме"],
+                correct: 1,
+                hint: "Древнегреческий город Олимпия",
+                hintUz: "Qadimgi yunon shahri Olimpiya"
+            },
+            {
+                type: "Текст об Олимпиаде",
+                question: "В каком году началась новая история Олимпийских игр?",
+                options: ["1896", "1900", "1776"],
+                correct: 0,
+                hint: "1896 год — первая современная Олимпиада в Афинах",
+                hintUz: "1896-yil — Afinada birinchi zamonaviy Olimpiada"
+            },
+            {
+                type: "Текст об Олимпиаде",
+                question: "Какой девиз Олимпийских игр?",
+                options: ["Мир и дружба", "Быстрее, выше, сильнее", "Честная игра"],
+                correct: 1,
+                hint: "«Быстрее, выше, сильнее» — девиз Олимпиады",
+                hintUz: "«Tezroq, balandroq, kuchliroq»"
+            },
+            {
+                type: "Текст об Олимпиаде",
+                question: "Что символизирует белый олимпийский флаг?",
+                options: ["Победу", "Чистоту и справедливость", "Мир"],
+                correct: 1,
+                hint: "Белый флаг — символ чистоты и справедливости в спорте",
+                hintUz: "Oq bayroq — sportda poklik va adolat ramzi"
+            },
+            {
+                type: "Текст об Олимпиаде",
+                question: "Сколько медалей завоевали узбекские спортсмены в Рио-2016?",
+                options: ["10", "13", "15"],
+                correct: 1,
+                hint: "13 медалей: 4 золотые, 2 серебряные, 7 бронзовых",
+                hintUz: "13 ta medal: 4 oltin, 2 kumush, 7 bronza"
+            },
+            {
+                type: "Текст об Олимпиаде",
+                question: "Кто получил золотую медаль по лыжному фристайлу от Узбекистана?",
+                options: ["Оксана Чусовитина", "Лина Черязова", "Хасанбой Дусматов"],
+                correct: 1,
+                hint: "Лину Черязову прозвали «снежной королевой»",
+                hintUz: "Lina Cheryazovani «qor malikasi» deb atashgan"
+            },
+            {
+                type: "Текст об Олимпиаде",
+                question: "Что делают с олимпийским огнём после окончания соревнований?",
+                options: ["Зажигают", "Передают", "Гасят"],
+                correct: 2,
+                hint: "После окончания спортивных мероприятий огонь гасят",
+                hintUz: "Sport tadbirlari tugaganidan keyin olovni o'chirishadi"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let correctAnswers = 0;
+        let incorrectAnswers = 0;
+        let selectedOption = null;
+        let answered = false;
+        let shuffledQuestions = [];
+        let currentShuffledOptions = [];
+
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            shuffledQuestions = shuffleArray(questions);
+            renderQuestion();
+        });
+
+        function showSection(section, btn) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+            document.getElementById(section).classList.add('active');
+            if (btn) btn.classList.add('active');
+        }
+
+        function renderQuestion() {
+            if (currentQuestion >= shuffledQuestions.length) {
+                showResults();
+                return;
+            }
+
+            const q = shuffledQuestions[currentQuestion];
+            const card = document.getElementById('questionCard');
+            
+            const optionsWithIndex = q.options.map((opt, i) => ({ text: opt, originalIndex: i }));
+            currentShuffledOptions = shuffleArray(optionsWithIndex);
+            
+            card.innerHTML = `
+                <div class="question-header">
+                    <span class="question-number">Вопрос ${currentQuestion + 1}</span>
+                    <span class="question-type">${q.type}</span>
+                </div>
+                <div class="question-text">${q.question}</div>
+                <div class="options-container">
+                    ${currentShuffledOptions.map((opt, i) => `
+                        <div class="option" onclick="selectOption(${i})" data-index="${i}" data-original="${opt.originalIndex}">
+                            <span class="option-marker">${String.fromCharCode(65 + i)}</span>
+                            <span class="option-text">${opt.text}</span>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="hint-container">
+                    <button class="hint-btn" onclick="showHint()">💡 Подсказка / Yordam</button>
+                    <div class="hint-box" id="hintBox">
+                        <div class="hint-label">💡 Подсказка:</div>
+                        <div class="hint-text">${q.hint}</div>
+                        <div class="hint-text-uz">${q.hintUz}</div>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback"></div>
+                <div class="btn-container">
+                    <button class="btn btn-primary" id="checkBtn" onclick="checkAnswer()" disabled>Проверить</button>
+                    <button class="btn btn-next" id="nextBtn" onclick="nextQuestion()" style="display:none;">Дальше →</button>
+                </div>
+            `;
+
+            selectedOption = null;
+            answered = false;
+            updateProgress();
+        }
+
+        function selectOption(index) {
+            if (answered) return;
+            
+            document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+            document.querySelector(`.option[data-index="${index}"]`).classList.add('selected');
+            selectedOption = index;
+            document.getElementById('checkBtn').disabled = false;
+        }
+
+        function showHint() {
+            document.getElementById('hintBox').classList.toggle('show');
+        }
+
+        function checkAnswer() {
+            if (selectedOption === null || answered) return;
+            
+            answered = true;
+            const q = shuffledQuestions[currentQuestion];
+            const options = document.querySelectorAll('.option');
+            const feedback = document.getElementById('feedback');
+            
+            const selectedOriginalIndex = currentShuffledOptions[selectedOption].originalIndex;
+            
+            options.forEach(opt => opt.classList.add('disabled'));
+            
+            const correctShuffledIndex = currentShuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+            
+            if (selectedOriginalIndex === q.correct) {
+                correctAnswers++;
+                options[selectedOption].classList.add('correct');
+                feedback.className = 'feedback show correct';
+                feedback.innerHTML = `
+                    <div class="feedback-title">✅ Правильно! / To'g'ri!</div>
+                    <div class="feedback-text">Отличная работа! 🏆</div>
+                `;
+            } else {
+                incorrectAnswers++;
+                options[selectedOption].classList.add('incorrect');
+                options[correctShuffledIndex].classList.add('correct');
+                feedback.className = 'feedback show incorrect';
+                feedback.innerHTML = `
+                    <div class="feedback-title">❌ Неправильно / Noto'g'ri</div>
+                    <div class="feedback-text">Правильный ответ: <strong>${q.options[q.correct]}</strong></div>
+                `;
+            }
+            
+            document.getElementById('checkBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'inline-flex';
+            document.getElementById('correctCount').textContent = correctAnswers;
+            document.getElementById('incorrectCount').textContent = incorrectAnswers;
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion >= shuffledQuestions.length) {
+                showResults();
+            } else {
+                renderQuestion();
+            }
+        }
+
+        function updateProgress() {
+            document.getElementById('currentQ').textContent = currentQuestion + 1;
+            document.getElementById('totalQ').textContent = shuffledQuestions.length;
+            const percent = (currentQuestion / shuffledQuestions.length) * 100;
+            document.getElementById('progressFill').style.width = percent + '%';
+        }
+
+        function showResults() {
+            document.getElementById('resultsTab').style.display = 'inline-block';
+            showSection('results', document.getElementById('resultsTab'));
+            
+            const score = correctAnswers;
+            const total = shuffledQuestions.length;
+            const percent = Math.round((score / total) * 100);
+            
+            document.getElementById('resultsScore').textContent = `${score}/${total}`;
+            
+            let icon, title, text, textUz;
+            if (percent >= 90) {
+                icon = '🥇'; 
+                title = 'Золотая медаль!'; 
+                text = 'Вы — олимпийский чемпион!';
+                textUz = 'Siz — olimpiya chempionisiz!';
+            } else if (percent >= 70) {
+                icon = '🥈'; 
+                title = 'Серебряная медаль!'; 
+                text = 'Отличный результат!';
+                textUz = 'A\'lo natija!';
+            } else if (percent >= 50) {
+                icon = '🥉'; 
+                title = 'Бронзовая медаль!'; 
+                text = 'Хороший результат, но можно лучше!';
+                textUz = 'Yaxshi natija, lekin yaxshiroq bo\'lishi mumkin!';
+            } else {
+                icon = '💪'; 
+                title = 'Тренируйтесь!'; 
+                text = 'Повторите правила и попробуйте снова.';
+                textUz = 'Qoidalarni takrorlang va qaytadan urinib ko\'ring.';
+            }
+            
+            document.getElementById('resultsIcon').textContent = icon;
+            document.getElementById('resultsTitle').textContent = title;
+            document.getElementById('resultsText').textContent = text;
+            document.getElementById('resultsTextUz').textContent = textUz;
+        }
+
+        function restartTest() {
+            currentQuestion = 0;
+            correctAnswers = 0;
+            incorrectAnswers = 0;
+            document.getElementById('correctCount').textContent = 0;
+            document.getElementById('incorrectCount').textContent = 0;
+            document.getElementById('resultsTab').style.display = 'none';
+            shuffledQuestions = shuffleArray(questions);
+            showSection('test', document.querySelector('.tab-btn:nth-child(2)'));
+            renderQuestion();
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>
